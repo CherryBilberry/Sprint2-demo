@@ -10,7 +10,7 @@ def index(request):
 
 
 def gentella_html(request):
-    context = {}
+    context = {'abc':'abc'}
     # The template to be loaded as per gentelella.
     # All resource paths for gentelella end in .html.
 
