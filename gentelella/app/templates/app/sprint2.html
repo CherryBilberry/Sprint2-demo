@@ -74,12 +74,38 @@
                 <div class="form-group">
                   <label class="control-label col-md-3 col-sm-3 col-xs-12">Company</label>
                   <div class="col-md-9 col-sm-9 col-xs-12">
-                    <input type="text" class="form-control" placeholder="Default Input" id="autocomplete-custom-append2">
+                    <input type="text" class="form-control" placeholder="Company Name" id="autocomplete-custom-append2">
                   </div>
                 </div>
 
-                  <div class="form-group">
-                  <label class="col-md-3 col-sm-3 col-xs-12 control-label">Type of Matter
+
+                <!-- 1 -->
+                <div class="form-group">
+                  <label class="control-label col-md-3 col-sm-3 col-xs-12">Case Value </label>
+                  <div class="col-md-9 col-sm-9 col-xs-12">
+                    <input type="number" class="form-control"  placeholder="200">
+                  </div>
+                </div>
+
+                <!-- 2 -->
+                <div class="form-group">
+                  <label class="control-label col-md-3 col-sm-3 col-xs-12"> Documents Number</label>
+                  <div class="col-md-9 col-sm-9 col-xs-12">
+                    <input type="number" class="form-control"  placeholder="600">
+                  </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="form-group">
+                  <label class="control-label col-md-3 col-sm-3 col-xs-12">Company Size </label>
+                  <div class="col-md-9 col-sm-9 col-xs-12">
+                    <input type="number" class="form-control"  placeholder="500">
+                  </div>
+                </div>
+
+                <!-- 4 -->
+                <div class="form-group">
+                  <label class="col-md-3 col-sm-3 col-xs-12 control-label">Company Industry
                     <br>
                     <small class="text-navy"></small>
                   </label>
@@ -87,20 +113,44 @@
                   <div class="col-md-9 col-sm-9 col-xs-12">
                     <div class="radio">
                       <label>
-                        <input type="radio" class="flat" checked name="iCheck">  Litigation
+                        <input type="radio" class="flat" checked name="iCheck4" value='0'> Banking
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" class="flat" name="iCheck"> Corporate
+                        <input type="radio" class="flat" name="iCheck4" value='1'>  Communication &nbsp;
+                      </label>
+                    </div>
+                      <div class="radio">
+                      <label>
+                        <input type="radio" class="flat" name="iCheck4" value='2'>  Health &nbsp;
+                      </label>
+                    </div>
+                      <div class="radio">
+                      <label>
+                        <input type="radio" class="flat" name="iCheck4" value='3'>   Manufacturing
+                      </label>
+                    </div>
+                      <div class="radio">
+                      <label>
+                        <input type="radio" class="flat" name="iCheck4" value='4'>    Tech
                       </label>
                     </div>
 
                   </div>
                 </div>
 
-                  <div class="form-group">
-                  <label class="col-md-3 col-sm-3 col-xs-12 control-label">Choose Your Corporate Type
+                <!-- 5 -->
+                <div class="form-group">
+                  <label class="control-label col-md-3 col-sm-3 col-xs-12">Company Revenue </label>
+                  <div class="col-md-9 col-sm-9 col-xs-12">
+                    <input type="number" class="form-control"  placeholder="250000">
+                  </div>
+                </div>
+
+                <!-- 6 -->
+                <div class="form-group">
+                  <label class="col-md-3 col-sm-3 col-xs-12 control-label">Diligence Requirements
                     <br>
                     <small class="text-navy"></small>
                   </label>
@@ -108,45 +158,21 @@
                   <div class="col-md-9 col-sm-9 col-xs-12">
                     <div class="radio">
                       <label>
-                        <input type="radio" class="flat" checked name="iCheck1">  Real Estate
+                        <input type="radio" class="flat" checked name="iCheck6" value='0'>  Red Flag
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" class="flat" name="iCheck1">  Energy &nbsp;
-                      </label>
-                    </div>
-                      <div class="radio">
-                      <label>
-                        <input type="radio" class="flat" name="iCheck1">  Banking &nbsp;
-                      </label>
-                    </div>
-                      <div class="radio">
-                      <label>
-                        <input type="radio" class="flat" name="iCheck1">   Finance
-                      </label>
-                    </div>
-                      <div class="radio">
-                      <label>
-                        <input type="radio" class="flat" name="iCheck1">    M&A
+                        <input type="radio" class="flat" name="iCheck6" value='1'> Full DDR
                       </label>
                     </div>
 
                   </div>
                 </div>
 
-
-                  <div class="form-group">
-                  <label class="control-label col-md-3 col-sm-3 col-xs-12">Overall Value of the Transaction </label>
-                  <div class="col-md-9 col-sm-9 col-xs-12">
-                    <input type="number" class="form-control"  placeholder="10000">
-                  </div>
-                </div>
-
-
-
-                  <div class="form-group">
-                  <label class="col-md-3 col-sm-3 col-xs-12 control-label">Choose Your Jurisdiction
+                <!-- 7 -->
+                <div class="form-group">
+                  <label class="col-md-3 col-sm-3 col-xs-12 control-label">Transaction Structure
                     <br>
                     <small class="text-navy"></small>
                   </label>
@@ -154,12 +180,53 @@
                   <div class="col-md-9 col-sm-9 col-xs-12">
                     <div class="radio">
                       <label>
-                        <input type="radio" class="flat" checked name="iCheck2">   US Only &nbsp;
+                        <input type="radio" class="flat" checked name="iCheck7" value='0'> Earnout 
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" class="flat" name="iCheck2">  International
+                        <input type="radio" class="flat" name="iCheck7" value='1'>  Escrow &nbsp;
+                      </label>
+                    </div>
+                      <div class="radio">
+                      <label>
+                        <input type="radio" class="flat" name="iCheck7" value='2'>  Gross-up &nbsp;
+                      </label>
+                    </div>
+                      <div class="radio">
+                      <label>
+                        <input type="radio" class="flat" name="iCheck7" value='3'>   Not Sure 
+                      </label>
+                    </div>
+                      <div class="radio">
+                      <label>
+                        <input type="radio" class="flat" name="iCheck7" value='4'> Options to Employees   
+                      </label>
+                    </div>
+
+                  </div>
+                </div>
+
+                <!-- 8 -->
+
+
+
+
+                  <div class="form-group">
+                  <label class="col-md-3 col-sm-3 col-xs-12 control-label">Jurisdiction
+                    <br>
+                    <small class="text-navy"></small>
+                  </label>
+
+                  <div class="col-md-9 col-sm-9 col-xs-12">
+                    <div class="radio">
+                      <label>
+                        <input type="radio" class="flat" checked name="iCheck8" value='0'> Multiple &nbsp;
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label>
+                        <input type="radio" class="flat" name="iCheck8" value='1'>  US Only
                       </label>
                     </div>
 
