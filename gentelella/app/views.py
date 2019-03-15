@@ -19,3 +19,4 @@ def gentella_html(request):
     template = loader.get_template('app/' + load_template)
     return HttpResponse(template.render(context, request))
 
+
