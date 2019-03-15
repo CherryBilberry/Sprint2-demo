@@ -4640,7 +4640,7 @@ if (typeof NProgress != 'undefined') {
 				legend: {
 				  x: 'center',
 				  y: 'bottom',
-				  data: ['Partner', 'Senior Associate', 'Associates', 'Junior Associate', 'Paralegals']
+				  data: ['Partner', 'Principal Associate', 'Senior Associates', 'Junior Associate', 'Paralegals']
 				},
 				toolbox: {
 				  show: true,
@@ -4696,10 +4696,10 @@ if (typeof NProgress != 'undefined') {
 					name: 'Partner'
 				  }, {
 					value: 2,
-					name: 'Senior Associate'
+					name: 'Principal Associate'
 				  }, {
 					value: 3,
-					name: 'Associates'
+					name: 'Senior Associates'
 				  }, {
 					value: 5,
 					name: 'Junior Associate'
@@ -4758,8 +4758,8 @@ if (typeof NProgress != 'undefined') {
 			
 									data:[
 											{value:100, name:'Partner'},
-											{value:40, name:'Senior Partner'},
-											{value:30, name:'Associates'},
+											{value:40, name:'Principal Associate'},
+											{value:30, name:'Senior Associates'},
 											{value:5, name:'Junior Associates'},
 											{value:1, name:'Paralegal'}
 									]
@@ -4775,7 +4775,7 @@ if (typeof NProgress != 'undefined') {
 				var echartDD = echarts.init(document.getElementById('echart_dd'));
 			  echartDD.setOption({
                       legend: {
-                  data: ['Partner','Senior Partner','Associates', 'Junior Associates', 'Paralegal']
+                  data: ['Partner','Principal Associate','Senior Associates', 'Junior Associates', 'Paralegal']
                 },
                    xAxis:  {
                       type: 'value'
@@ -4810,7 +4810,7 @@ if (typeof NProgress != 'undefined') {
             data: [320, 302, 301]
         },
         {
-            name: 'Senior Partner',
+            name: 'Principal Associate',
             type: 'bar',
             stack: '总量',
             label: {
@@ -4822,7 +4822,7 @@ if (typeof NProgress != 'undefined') {
             data: [120, 132, 101]
         },
         {
-            name: 'Associates',
+            name: 'Senior Associates',
             type: 'bar',
             stack: '总量',
             label: {
@@ -4874,7 +4874,7 @@ if (typeof NProgress != 'undefined') {
 				var echarttn = echarts.init(document.getElementById('echart_tn'));
 			  echarttn.setOption({
                       legend: {
-                  data: ['Partner','Senior Partner','Associates', 'Junior Associates', 'Paralegal']
+                  data: ['Partner','Principal Associate','Senior Associates', 'Junior Associates', 'Paralegal']
                 },
                    xAxis:  {
                       type: 'value'
@@ -4909,7 +4909,7 @@ if (typeof NProgress != 'undefined') {
             data: [320, 302]
         },
         {
-            name: 'Senior Partner',
+            name: 'Principal Associate',
             type: 'bar',
             stack: '总量',
             label: {
@@ -4921,7 +4921,7 @@ if (typeof NProgress != 'undefined') {
             data: [120, 132]
         },
         {
-            name: 'Associates',
+            name: 'Senior Associates',
             type: 'bar',
             stack: '总量',
             label: {
