@@ -6,7 +6,7 @@ from django.views.decorators.csrf import csrf_exempt
 
 def index(request):
     context = {}
-    template = loader.get_template('app/index.html')
+    template = loader.get_template('app/sprint2.html')
     return HttpResponse(template.render(context, request))
 
 

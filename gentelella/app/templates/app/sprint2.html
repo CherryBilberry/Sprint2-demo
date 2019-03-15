@@ -811,7 +811,7 @@
             response = data['raw'];
             $("#company_cost").text(data['cost']) ;
             $("#low_cost").text(Math.floor(data['cost'] * 1.1)) ;
-            $("#high_cost").text(data['cost'] * 1.4);
+            $("#high_cost").text(Math.floor(data['cost'] * 1.4));
 
             $("#ja").text(data['ja_sum']);
             $("#pl").text(data['pl_sum'])
