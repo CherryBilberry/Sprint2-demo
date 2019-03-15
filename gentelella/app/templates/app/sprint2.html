@@ -397,7 +397,7 @@
                   <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
                     <button type="button" class="btn btn-primary">Cancel</button>
                     <button type="reset" class="btn btn-primary">Reset</button>
-                    <button type="submit" class="btn btn-success">Submit</button>
+                    <button type="submit" class="btn btn-success"><a href="track.html">Submit</a></button>
                   </div>
                 </div>
 
@@ -435,7 +435,7 @@
 
                         <div class="col-md-6 col-sm-8 col-xs-12 tile_stats_count">
                           <span class="count_top"><i class="fa fa-clock-o"></i> Total Price to client:</span>
-                          <div class="count">$163,242 - 222,342</div>
+                          <div class="count">$ <span class="count" id="low_cost"> 163,242 </span> - <span class="count" id="high_cost"> 222,342 </span></div>
                           <!-- <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>3% </i> From last Week</span> -->
                         </div>
                         <!-- <div class="col-md-4 col-sm-8 col-xs-12 tile_stats_count">
@@ -465,7 +465,7 @@
 
             <div class="col-md-12 col-sm-12 col-xs-12 tile_stats_count">
               <span class="count_top"><i class="fa fa-user"></i> Total Cost to the law firm:</span>
-              <div class="count">$ 322,134</div>
+              <div class="count">$ <span class="count" id="company_cost">322,134</span></div>
               <!-- <span class="count_bottom"><i class="green">4% </i> From last Week</span> -->
             </div>
 
@@ -708,7 +708,7 @@
               </div>
                 </div>
             </div>
-<br>
+ <br>
           </div>
 
 
@@ -808,7 +808,13 @@
         data : param,
         dataType:'json',
         success : function(data) {
-            response = data;
+            response = data['raw'];
+            $("#company_cost").text(data['cost']) ;
+            $("#low_cost").text(Math.floor(data['cost'] * 1.1)) ;
+            $("#high_cost").text(data['cost'] * 1.4);
+
+
+
             var echartDD = echarts.init(document.getElementById('echart_dd'));
 			  echartDD.setOption({
                   legend: {
@@ -900,7 +906,7 @@
 
 					]
 			});
-            
+
 
             var echarttn = echarts.init(document.getElementById('echart_tn'));
 			  echarttn.setOption({

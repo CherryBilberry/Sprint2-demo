@@ -23,7 +23,7 @@ def gentella_html(request):
 @csrf_exempt
 def regr(request):
     test_x = request.POST
-    y = list(predict(test_x).flatten())
-    y = [int(n) for n in y]
+    result = predict(test_x)
 
-    return JsonResponse(y, safe=False)
+
+    return JsonResponse(result, safe=False)
