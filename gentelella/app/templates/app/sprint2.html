@@ -826,7 +826,7 @@
             var echartDD = echarts.init(document.getElementById('echart_dd'));
 			  echartDD.setOption({
                   legend: {
-                  data: ['Partner','Senior Partner','Associates', 'Junior Associates', 'Paralegal']
+                  data: ['Partner','Pricipal Associates','Senior Associates', 'Junior Associates', 'Paralegal']
                 },
                    xAxis:  {
                       type: 'value'
@@ -863,7 +863,7 @@
                       data: [response[4], response[9], response[14]]
                   },
                     {
-                        name: 'Senior Partner',
+                        name: 'Principal Associates',
                         type: 'bar',
                         stack: '总量',
                         label: {
@@ -875,7 +875,7 @@
                         data: [response[3], response[8], response[13]]
                     },
                   {
-                      name: 'Associates',
+                      name: 'Senior Associates',
                       type: 'bar',
                       stack: '总量',
                       label: {
@@ -919,7 +919,7 @@
             var echarttn = echarts.init(document.getElementById('echart_tn'));
 			  echarttn.setOption({
                   legend: {
-                  data: ['Partner','Senior Partner','Associates', 'Junior Associates', 'Paralegal']
+                  data: ['Partner','Principal Associates','Senior Associates', 'Junior Associates', 'Paralegal']
                 },
                    xAxis:  {
                       type: 'value'
@@ -954,7 +954,7 @@
             data: [response[19], response[24]]
         },
         {
-            name: 'Senior Partner',
+            name: 'Principal Associates',
             type: 'bar',
             stack: '总量',
             label: {
@@ -966,7 +966,7 @@
             data: [response[18], response[23]]
         },
         {
-            name: 'Associates',
+            name: 'Senior Associates',
             type: 'bar',
             stack: '总量',
             label: {
