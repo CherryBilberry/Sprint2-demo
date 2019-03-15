@@ -56,7 +56,7 @@ def predict(params_dict):
 
     y_pred = regr.predict(np.array(x_test).reshape(1, -1))
     y_pred = y_pred.flatten()
-
+    y_pred = np.abs(y_pred)
     pl_sum = y_pred[0] + y_pred[9] + y_pred[11] + y_pred[16] + y_pred[20]
     ja_sum = y_pred[1] + y_pred[5] + y_pred[12] + y_pred[17] + y_pred[21]
     sa_sum = y_pred[2] + y_pred[7] + y_pred[13] + y_pred[17] + y_pred[22]
@@ -73,7 +73,7 @@ def predict(params_dict):
               'cost' : int(cost),
               'raw': [int(n) for n in y_pred] }
 
-
+    print (y_pred)
 
     return result
 
