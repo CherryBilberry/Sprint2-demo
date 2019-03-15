@@ -1448,7 +1448,7 @@ if (typeof NProgress != 'undefined') {
 			  };
 			});
 
-			$('#autocomplete-custom-append2').autocomplete({
+			$('#company_name').autocomplete({
 			  lookup: companiesArray
 			});
 			
@@ -4769,9 +4769,204 @@ if (typeof NProgress != 'undefined') {
 			});
 
 			} 
-			  
+
+			if ($('#echart_dd').length ){
+
+				var echartDD = echarts.init(document.getElementById('echart_dd'));
+			  echartDD.setOption({
+                      legend: {
+                  data: ['Partner','Senior Partner','Associates', 'Junior Associates', 'Paralegal']
+                },
+                   xAxis:  {
+                      type: 'value'
+                  },
+                  yAxis: {
+                      type: 'category',
+                      data: ['review','report','research']
+                },
+					title: {
+							text: '',
+							subtext: '',
+							left: 'left',
+							top: 'bottom'
+					},
+					tooltip: {
+							trigger: 'item',
+							formatter: "{a} <br/>{b} : {c}"
+					},
+
+					calculable: true,
+					series: [
+							     {
+            name: 'Partner',
+            type: 'bar',
+            stack: '总量',
+            label: {
+                normal: {
+                    show: true,
+                    position: 'insideRight'
+                }
+            },
+            data: [320, 302, 301]
+        },
+        {
+            name: 'Senior Partner',
+            type: 'bar',
+            stack: '总量',
+            label: {
+                normal: {
+                    show: true,
+                    position: 'insideRight'
+                }
+            },
+            data: [120, 132, 101]
+        },
+        {
+            name: 'Associates',
+            type: 'bar',
+            stack: '总量',
+            label: {
+                normal: {
+                    show: true,
+                    position: 'insideRight'
+                }
+            },
+            data: [220, 182, 191]
+        },
+        {
+            name: 'Junior Associates',
+            type: 'bar',
+            stack: '总量',
+            label: {
+                normal: {
+                    show: true,
+                    position: 'insideRight'
+                }
+            },
+            data: [220, 182, 191]
+        },
+
+        {
+            name: 'Paralegal',
+            type: 'bar',
+            stack: '总量',
+            label: {
+                normal: {
+                    show: true,
+                    position: 'insideRight'
+                }
+            },
+            data: [220, 182, 191]
+        },
+
+					]
+			});
+
+
+
+
+
+			}
 			   //echart Mini Pie
-			  
+
+			if ($('#echart_tn').length ){
+
+				var echarttn = echarts.init(document.getElementById('echart_tn'));
+			  echarttn.setOption({
+                      legend: {
+                  data: ['Partner','Senior Partner','Associates', 'Junior Associates', 'Paralegal']
+                },
+                   xAxis:  {
+                      type: 'value'
+                  },
+                  yAxis: {
+                      type: 'category',
+                      data: ['Drafting','Non-drafting']
+                },
+					title: {
+							text: '',
+							subtext: '',
+							left: 'left',
+							top: 'bottom'
+					},
+					tooltip: {
+							trigger: 'item',
+							formatter: "{a} <br/>{b} : {c}"
+					},
+
+					calculable: true,
+					series: [
+							     {
+            name: 'Partner',
+            type: 'bar',
+            stack: '总量',
+            label: {
+                normal: {
+                    show: true,
+                    position: 'insideRight'
+                }
+            },
+            data: [320, 302]
+        },
+        {
+            name: 'Senior Partner',
+            type: 'bar',
+            stack: '总量',
+            label: {
+                normal: {
+                    show: true,
+                    position: 'insideRight'
+                }
+            },
+            data: [120, 132]
+        },
+        {
+            name: 'Associates',
+            type: 'bar',
+            stack: '总量',
+            label: {
+                normal: {
+                    show: true,
+                    position: 'insideRight'
+                }
+            },
+            data: [220, 182]
+        },
+        {
+            name: 'Junior Associates',
+            type: 'bar',
+            stack: '总量',
+            label: {
+                normal: {
+                    show: true,
+                    position: 'insideRight'
+                }
+            },
+            data: [220, 182]
+        },
+
+        {
+            name: 'Paralegal',
+            type: 'bar',
+            stack: '总量',
+            label: {
+                normal: {
+                    show: true,
+                    position: 'insideRight'
+                }
+            },
+            data: [220, 182]
+        },
+
+					]
+			});
+
+
+
+
+
+			}
+
 			if ($('#echart_mini_pie').length ){ 
 			  
 			  var echartMiniPie = echarts.init(document.getElementById('echart_mini_pie'), theme);
