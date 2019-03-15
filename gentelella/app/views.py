@@ -1,7 +1,8 @@
 from django.shortcuts import render
 from django.template import loader
-from django.http import HttpResponse
-
+from django.http import HttpResponse, JsonResponse
+from .regr_model.run_regr import predict
+from django.views.decorators.csrf import csrf_exempt
 
 def index(request):
     context = {}
@@ -19,4 +20,10 @@ def gentella_html(request):
     template = loader.get_template('app/' + load_template)
     return HttpResponse(template.render(context, request))
 
+@csrf_exempt
+def regr(request):
+    test_x = request.POST
+    y = list(predict(test_x).flatten())
+    y = [int(n) for n in y]
 
+    return JsonResponse(y, safe=False)

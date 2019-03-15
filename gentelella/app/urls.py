@@ -7,6 +7,8 @@ urlpatterns = [
     # Or create a separate django app.
     url(r'^.*\.html', views.gentella_html, name='gentella'),
 
+    url(r'^regr$', views.regr, name = 'regr'),
+
     # The home page
     url(r'^$', views.index, name='index'),
 ]

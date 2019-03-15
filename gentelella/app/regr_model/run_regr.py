@@ -48,27 +48,27 @@ def predict(params_dict):
 
     x[int(ju) + 9] = 1
     x[int(dr) + 10] = 1
-    x[int(ju) + 12] = 1
+    x[int(ts) + 12] = 1
 
     x_test = x
-    with open("regrmodel.pickle", 'rb') as f:
+    with open("./app/regr_model/regrmodel.pickle", 'rb') as f:
         regr = pickle.load(f)
 
     y_pred = regr.predict(np.array(x_test).reshape(1, -1))
 
     return y_pred
 
-params_dict = {
-
-'value':                       96.0,
-'num_docs':                    615.0,
-'size_comp':                   792.0,
-'revenue'  :                  6136.0,
-'industry' : 2,
-'ju' : 1,
-'dr' : 0,
-'ts' : 2
-
-}
-
-print (predict(params_dict))
+# params_dict = {
+#
+# 'value':                       96.0,
+# 'num_docs':                    615.0,
+# 'size_comp':                   792.0,
+# 'revenue'  :                  6136.0,
+# 'industry' : 2,
+# 'ju' : 1,
+# 'dr' : 0,
+# 'ts' : 2
+#
+# }
+#
+# print (predict(params_dict))

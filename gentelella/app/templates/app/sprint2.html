@@ -69,12 +69,12 @@
             </div>
             <div class="x_content">
               <br />
-              <form class="form-horizontal form-label-left">
+              <form class="form-horizontal form-label-left" id="case_param">
 
                 <div class="form-group">
                   <label class="control-label col-md-3 col-sm-3 col-xs-12">Company</label>
                   <div class="col-md-9 col-sm-9 col-xs-12">
-                    <input type="text" class="form-control" placeholder="Company Name" id="autocomplete-custom-append2">
+                    <input type="text" class="form-control" placeholder="Company Name" id="company_name">
                   </div>
                 </div>
 
@@ -83,7 +83,7 @@
                 <div class="form-group">
                   <label class="control-label col-md-3 col-sm-3 col-xs-12">Case Value </label>
                   <div class="col-md-9 col-sm-9 col-xs-12">
-                    <input type="number" class="form-control"  placeholder="200">
+                    <input type="number" class="form-control"  placeholder="200" id="value" value="200">
                   </div>
                 </div>
 
@@ -91,7 +91,7 @@
                 <div class="form-group">
                   <label class="control-label col-md-3 col-sm-3 col-xs-12"> Documents Number</label>
                   <div class="col-md-9 col-sm-9 col-xs-12">
-                    <input type="number" class="form-control"  placeholder="600">
+                    <input type="number" class="form-control"  placeholder="600" id="num_docs" value="600">
                   </div>
                 </div>
 
@@ -99,44 +99,21 @@
                 <div class="form-group">
                   <label class="control-label col-md-3 col-sm-3 col-xs-12">Company Size </label>
                   <div class="col-md-9 col-sm-9 col-xs-12">
-                    <input type="number" class="form-control"  placeholder="500">
+                    <input type="number" class="form-control"  placeholder="500" id="size_comp" value="500">
                   </div>
                 </div>
 
                 <!-- 4 -->
                 <div class="form-group">
-                  <label class="col-md-3 col-sm-3 col-xs-12 control-label">Company Industry
-                    <br>
-                    <small class="text-navy"></small>
-                  </label>
-
+                  <label class="control-label col-md-3 col-sm-3 col-xs-12">Company Industry</label>
                   <div class="col-md-9 col-sm-9 col-xs-12">
-                    <div class="radio">
-                      <label>
-                        <input type="radio" class="flat" checked name="iCheck4" value='0'> Banking
-                      </label>
-                    </div>
-                    <div class="radio">
-                      <label>
-                        <input type="radio" class="flat" name="iCheck4" value='1'>  Communication &nbsp;
-                      </label>
-                    </div>
-                      <div class="radio">
-                      <label>
-                        <input type="radio" class="flat" name="iCheck4" value='2'>  Health &nbsp;
-                      </label>
-                    </div>
-                      <div class="radio">
-                      <label>
-                        <input type="radio" class="flat" name="iCheck4" value='3'>   Manufacturing
-                      </label>
-                    </div>
-                      <div class="radio">
-                      <label>
-                        <input type="radio" class="flat" name="iCheck4" value='4'>    Tech
-                      </label>
-                    </div>
-
+                    <select class="form-control" id="industry">
+                      <option value="0">Banking</option>
+                      <option value="1">Communication</option>
+                      <option value="2">Health</option>
+                      <option value="3">Manufacturing</option>
+                      <option value="4">Tech</option>
+                    </select>
                   </div>
                 </div>
 
@@ -144,93 +121,47 @@
                 <div class="form-group">
                   <label class="control-label col-md-3 col-sm-3 col-xs-12">Company Revenue </label>
                   <div class="col-md-9 col-sm-9 col-xs-12">
-                    <input type="number" class="form-control"  placeholder="250000">
+                    <input type="number" class="form-control"  placeholder="250000", id="revenue" value="250000">
                   </div>
                 </div>
 
                 <!-- 6 -->
                 <div class="form-group">
-                  <label class="col-md-3 col-sm-3 col-xs-12 control-label">Diligence Requirements
-                    <br>
-                    <small class="text-navy"></small>
-                  </label>
-
+                  <label class="control-label col-md-3 col-sm-3 col-xs-12">Diligence Requirements</label>
                   <div class="col-md-9 col-sm-9 col-xs-12">
-                    <div class="radio">
-                      <label>
-                        <input type="radio" class="flat" checked name="iCheck6" value='0'>  Red Flag
-                      </label>
-                    </div>
-                    <div class="radio">
-                      <label>
-                        <input type="radio" class="flat" name="iCheck6" value='1'> Full DDR
-                      </label>
-                    </div>
-
+                    <select class="form-control" id="dr">
+                      <option value="0">Red Flag</option>
+                      <option value="1">Full DDR</option>
+                    </select>
                   </div>
                 </div>
+
 
                 <!-- 7 -->
                 <div class="form-group">
-                  <label class="col-md-3 col-sm-3 col-xs-12 control-label">Transaction Structure
-                    <br>
-                    <small class="text-navy"></small>
-                  </label>
-
+                  <label class="control-label col-md-3 col-sm-3 col-xs-12">Transaction Structure</label>
                   <div class="col-md-9 col-sm-9 col-xs-12">
-                    <div class="radio">
-                      <label>
-                        <input type="radio" class="flat" checked name="iCheck7" value='0'> Earnout 
-                      </label>
-                    </div>
-                    <div class="radio">
-                      <label>
-                        <input type="radio" class="flat" name="iCheck7" value='1'>  Escrow &nbsp;
-                      </label>
-                    </div>
-                      <div class="radio">
-                      <label>
-                        <input type="radio" class="flat" name="iCheck7" value='2'>  Gross-up &nbsp;
-                      </label>
-                    </div>
-                      <div class="radio">
-                      <label>
-                        <input type="radio" class="flat" name="iCheck7" value='3'>   Not Sure 
-                      </label>
-                    </div>
-                      <div class="radio">
-                      <label>
-                        <input type="radio" class="flat" name="iCheck7" value='4'> Options to Employees   
-                      </label>
-                    </div>
-
+                    <select class="form-control" id="ts">
+                      <option value="0">Earnout</option>
+                      <option value="1">Escrow &nbsp</option>
+                      <option value="2">Gross-up </option>
+                      <option value="3">Not Sure </option>
+                      <option value="4">Options to Employees </option>
+                    </select>
                   </div>
                 </div>
 
+
+
                 <!-- 8 -->
-
-
-
-
-                  <div class="form-group">
-                  <label class="col-md-3 col-sm-3 col-xs-12 control-label">Jurisdiction
-                    <br>
-                    <small class="text-navy"></small>
-                  </label>
-
+                <div class="form-group">
+                  <label class="control-label col-md-3 col-sm-3 col-xs-12">Jurisdiction</label>
                   <div class="col-md-9 col-sm-9 col-xs-12">
-                    <div class="radio">
-                      <label>
-                        <input type="radio" class="flat" checked name="iCheck8" value='0'> Multiple &nbsp;
-                      </label>
-                    </div>
-                    <div class="radio">
-                      <label>
-                        <input type="radio" class="flat" name="iCheck8" value='1'>  US Only
-                      </label>
-                    </div>
+                    <select class="form-control" id="ju">
+                      <option value="0">Multiple </option>
+                      <option value="1">US Only</option>
 
-
+                    </select>
                   </div>
                 </div>
 
@@ -475,9 +406,6 @@
           </div>
         </div>
 
-
-
-
             </div>
 
             <div class="col-md-8 col-sm-8 col-xs-12">
@@ -719,19 +647,68 @@
             </div>
           </div>
 
+                      <div class="col-md-12 col-sm-12 col-xs-12">
+          <div class="x_panel">
+            <div class="x_title">
+              <h2>Due Diligence</h2>
+              <ul class="nav navbar-right panel_toolbox">
+                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                </li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Settings 1</a>
+                    </li>
+                    <li><a href="#">Settings 2</a>
+                    </li>
+                  </ul>
+                </li>
+                <li><a class="close-link"><i class="fa fa-close"></i></a>
+                </li>
+              </ul>
+              <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+
+              <div id="echart_dd" style="height:300px;"></div>
+
+            </div>
+          </div>
+        </div>
+                      <div class="col-md-12 col-sm-12 col-xs-12">
+          <div class="x_panel">
+            <div class="x_title">
+              <h2>Transaction</h2>
+              <ul class="nav navbar-right panel_toolbox">
+                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                </li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Settings 1</a>
+                    </li>
+                    <li><a href="#">Settings 2</a>
+                    </li>
+                  </ul>
+                </li>
+                <li><a class="close-link"><i class="fa fa-close"></i></a>
+                </li>
+              </ul>
+              <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+
+              <div id="echart_tn" style="height:300px;"></div>
+
+            </div>
+          </div>
+        </div>
                     </div>
                 </div>
               </div>
                 </div>
             </div>
-
 <br>
-
-
-
-
-
-
           </div>
 
 
@@ -805,6 +782,234 @@
 
 {% block javascripts %}
   {{ block.super}}
+
+  <script>
+
+
+
+
+    $("#case_param").change(function() {
+        var param = {};
+        param['company'] = $("#company_name").val();
+        param['value'] = $("#value").val();
+        param['num_docs'] = $("#num_docs").val();
+        param['size_comp'] = $("#size_comp").val();
+        param['industry'] = $("#industry option:selected").val();
+        param['revenue'] = $("#revenue").val();
+        param['dr'] = $("#dr option:selected").val();
+        param['ts'] = $("#ts option:selected").val();
+        param['ju'] = $("#ju option:selected").val();
+
+
+
+      $.ajax({
+        url : 'regr',
+        type : 'POST',
+        data : param,
+        dataType:'json',
+        success : function(data) {
+            response = data;
+            var echartDD = echarts.init(document.getElementById('echart_dd'));
+			  echartDD.setOption({
+                  legend: {
+                  data: ['Partner','Senior Partner','Associates', 'Junior Associates', 'Paralegal']
+                },
+                   xAxis:  {
+                      type: 'value'
+                  },
+                  yAxis: {
+                      type: 'category',
+                      data: ['review','report','research']
+                },
+					title: {
+							text: '',
+							subtext: '',
+							left: 'left',
+							top: 'bottom'
+					},
+                  tooltip : {
+                    trigger: 'axis',
+                    axisPointer : {
+                        type : 'shadow'
+                    }
+                     },
+
+					calculable: true,
+					series: [
+					    {
+                      name: 'Partner',
+                      type: 'bar',
+                      stack: '总量',
+                      label: {
+                          normal: {
+                              show: true,
+                              position: 'insideRight'
+                          }
+                      },
+                      data: [response[4], response[9], response[14]]
+                  },
+                    {
+                        name: 'Senior Partner',
+                        type: 'bar',
+                        stack: '总量',
+                        label: {
+                            normal: {
+                                show: true,
+                                position: 'insideRight'
+                            }
+                        },
+                        data: [response[3], response[8], response[13]]
+                    },
+                  {
+                      name: 'Associates',
+                      type: 'bar',
+                      stack: '总量',
+                      label: {
+                          normal: {
+                              show: true,
+                              position: 'insideRight'
+                          }
+                      },
+                      data: [response[2], response[7], response[12]]
+                  },
+                {
+                    name: 'Junior Associates',
+                    type: 'bar',
+                    stack: '总量',
+                    label: {
+                        normal: {
+                            show: true,
+                            position: 'insideRight'
+                        }
+                    },
+                    data: [response[1], response[6], response[11]]
+                },
+
+              {
+                  name: 'Paralegal',
+                  type: 'bar',
+                  stack: '总量',
+                  label: {
+                      normal: {
+                          show: true,
+                          position: 'insideRight'
+                      }
+                  },
+                  data: [response[0], response[5], response[10]]
+              },
+
+					]
+			});
+            
+
+            var echarttn = echarts.init(document.getElementById('echart_tn'));
+			  echarttn.setOption({
+                  legend: {
+                  data: ['Partner','Senior Partner','Associates', 'Junior Associates', 'Paralegal']
+                },
+                   xAxis:  {
+                      type: 'value'
+                  },
+                  yAxis: {
+                      type: 'category',
+                      data: ['Drafting','Non-drafting']
+                },
+					title: {
+							text: '',
+							subtext: '',
+							left: 'left',
+							top: 'bottom'
+					},
+					tooltip: {
+							trigger: 'item',
+							formatter: "{a} <br/>{b} : {c}"
+					},
+
+					calculable: true,
+					series: [
+							     {
+            name: 'Partner',
+            type: 'bar',
+            stack: '总量',
+            label: {
+                normal: {
+                    show: true,
+                    position: 'insideRight'
+                }
+            },
+            data: [response[19], response[24]]
+        },
+        {
+            name: 'Senior Partner',
+            type: 'bar',
+            stack: '总量',
+            label: {
+                normal: {
+                    show: true,
+                    position: 'insideRight'
+                }
+            },
+            data: [response[18], response[23]]
+        },
+        {
+            name: 'Associates',
+            type: 'bar',
+            stack: '总量',
+            label: {
+                normal: {
+                    show: true,
+                    position: 'insideRight'
+                }
+            },
+            data: [response[17], response[22]]
+        },
+        {
+            name: 'Junior Associates',
+            type: 'bar',
+            stack: '总量',
+            label: {
+                normal: {
+                    show: true,
+                    position: 'insideRight'
+                }
+            },
+            data: [response[16], response[21]]
+        },
+
+        {
+            name: 'Paralegal',
+            type: 'bar',
+            stack: '总量',
+            label: {
+                normal: {
+                    show: true,
+                    position: 'insideRight'
+                }
+            },
+            data: [response[15], response[20]]
+        },
+
+					]
+			});
+
+
+
+
+
+
+
+
+        },
+        error : function(request,error)
+        {
+            alert("Request: "+JSON.stringify(request));
+        }
+    });
+
+
+    });
+
+  </script>
   <!-- jQuery Smart Wizard -->
   <!-- <script src="/static/vendors/jQuery-Smart-Wizard/js/jquery.smartWizard.js"></script> -->
 {% endblock javascripts %}
