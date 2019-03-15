@@ -430,7 +430,10 @@
                     </ul>
                     <div class="clearfix"></div>
                   </div>
-                    <div class="x_content">
+
+                    <div id="wait" class="x_content">
+                    <div id="graph_content" class="x_content">
+
             <div class="row tile_count">
 
                         <div class="col-md-8 col-sm-8 col-xs-12 tile_stats_count">
@@ -800,6 +803,7 @@
         param['ts'] = $("#ts option:selected").val();
         param['ju'] = $("#ju option:selected").val();
 
+//        $("#graph_content").hide();
 
         $("#company_name").change(function(){
 
@@ -810,7 +814,7 @@
 //        }
 
 
-        })
+        });
 
       $.ajax({
         url : 'regr',
@@ -818,6 +822,9 @@
         data : param,
         dataType:'json',
         success : function(data) {
+//            $("#wait").hide();
+//            $("#graph_content").show();
+
             response = data['raw'];
             $("#company_cost").text(data['cost']) ;
              $("#cost").text(Math.floor(data['cost'] - data['pl_sum']*100)) ;
@@ -826,7 +833,7 @@
 //            $("#high_cost").text(Math.floor(data['cost'] * 1.4));
 
             $("#ja").text(data['ja_sum']);
-            $("#pl").text(data['pl_sum'])
+            $("#pl").text(data['pl_sum']);
             $("#assocaites").text(data['sa_sum'])
             $("#senior_partner").text(data['pa_sum'])
             $("#partner").text(data['partner_sum'])
