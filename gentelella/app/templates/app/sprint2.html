@@ -573,7 +573,7 @@
                     </div>
                   </div>
                   <div class="w_right w_20">
-                    <span>2</span>
+                    <span id="partner">2</span>
                   </div>
                   <div class="clearfix"></div>
                 </div>
@@ -590,7 +590,7 @@
                     </div>
                   </div>
                   <div class="w_right w_20">
-                    <span>4</span>
+                    <span id="senior_partner">4</span>
                   </div>
                   <div class="clearfix"></div>
                 </div>
@@ -606,7 +606,7 @@
                     </div>
                   </div>
                   <div class="w_right w_20">
-                    <span>6</span>
+                    <span id="assocaites">6</span>
                   </div>
                   <div class="clearfix"></div>
                 </div>
@@ -622,7 +622,7 @@
                     </div>
                   </div>
                   <div class="w_right w_20">
-                    <span>12</span>
+                    <span id="ja">12</span>
                   </div>
                   <div class="clearfix"></div>
                 </div>
@@ -638,7 +638,7 @@
                     </div>
                   </div>
                   <div class="w_right w_20">
-                    <span>12</span>
+                    <span id="pl">12</span>
                   </div>
                   <div class="clearfix"></div>
                 </div>
@@ -812,6 +812,14 @@
             $("#company_cost").text(data['cost']) ;
             $("#low_cost").text(Math.floor(data['cost'] * 1.1)) ;
             $("#high_cost").text(data['cost'] * 1.4);
+
+            $("#ja").text(data['ja_sum']);
+            $("#pl").text(data['pl_sum'])
+            $("#assocaites").text(data['sa_sum'])
+            $("#senior_partner").text(data['pa_sum'])
+            $("#partner").text(data['partner_sum'])
+
+
 
 
 

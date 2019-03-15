@@ -61,15 +61,15 @@ def predict(params_dict):
     ja_sum = y_pred[1] + y_pred[5] + y_pred[12] + y_pred[17] + y_pred[21]
     sa_sum = y_pred[2] + y_pred[7] + y_pred[13] + y_pred[17] + y_pred[22]
     pa_sum = y_pred[3] + y_pred[8] + y_pred[14] + y_pred[18] + y_pred[23]
-    partenr_sum = y_pred[4] + y_pred[10] + y_pred[15] + y_pred[19] + y_pred[24]
+    partner_sum = y_pred[4] + y_pred[10] + y_pred[15] + y_pred[19] + y_pred[24]
 
-    cost = pl_sum * 100 + ja_sum * 200 + sa_sum * 350 + pa_sum * 450 + partenr_sum * 800
+    cost = pl_sum * 100 + ja_sum * 200 + sa_sum * 350 + pa_sum * 450 + partner_sum * 800
 
-    result = {'pl_sum' : pl_sum,
-              'ja_sum': ja_sum,
-              'sa_sum': sa_sum,
-              'pa_sum': pa_sum,
-              'partenr_sum': partenr_sum,
+    result = {'pl_sum' : int(pl_sum),
+              'ja_sum': int(ja_sum),
+              'sa_sum': int(sa_sum),
+              'pa_sum': int(pa_sum),
+              'partner_sum': int(partner_sum),
               'cost' : int(cost),
               'raw': [int(n) for n in y_pred] }
 
