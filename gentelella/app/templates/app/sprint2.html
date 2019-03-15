@@ -79,27 +79,11 @@
                 </div>
 
 
-                <!-- 1 -->
-                <div class="form-group">
-                  <label class="control-label col-md-3 col-sm-3 col-xs-12">Case Value </label>
-                  <div class="col-md-9 col-sm-9 col-xs-12">
-                    <input type="number" class="form-control"  placeholder="200" id="value" value="200">
-                  </div>
-                </div>
-
-                <!-- 2 -->
-                <div class="form-group">
-                  <label class="control-label col-md-3 col-sm-3 col-xs-12"> Documents Number</label>
-                  <div class="col-md-9 col-sm-9 col-xs-12">
-                    <input type="number" class="form-control"  placeholder="600" id="num_docs" value="600">
-                  </div>
-                </div>
-
                 <!-- 3 -->
                 <div class="form-group">
                   <label class="control-label col-md-3 col-sm-3 col-xs-12">Company Size </label>
                   <div class="col-md-9 col-sm-9 col-xs-12">
-                    <input type="number" class="form-control"  placeholder="500" id="size_comp" value="500">
+                    <input type="number" class="form-control"  placeholder="" id="size_comp" value="">
                   </div>
                 </div>
 
@@ -121,9 +105,26 @@
                 <div class="form-group">
                   <label class="control-label col-md-3 col-sm-3 col-xs-12">Company Revenue </label>
                   <div class="col-md-9 col-sm-9 col-xs-12">
-                    <input type="number" class="form-control"  placeholder="250000", id="revenue" value="250000">
+                    <input type="number" class="form-control"  placeholder="", id="revenue" value="">
                   </div>
                 </div>
+
+                <!-- 1 -->
+                <div class="form-group">
+                  <label class="control-label col-md-3 col-sm-3 col-xs-12">Case Value </label>
+                  <div class="col-md-9 col-sm-9 col-xs-12">
+                    <input type="number" class="form-control"  placeholder="200" id="value" value="">
+                  </div>
+                </div>
+
+                <!-- 2 -->
+                <div class="form-group">
+                  <label class="control-label col-md-3 col-sm-3 col-xs-12"> Documents Number</label>
+                  <div class="col-md-9 col-sm-9 col-xs-12">
+                    <input type="number" class="form-control"  placeholder="500" id="num_docs" value="">
+                  </div>
+                </div>
+
 
                 <!-- 6 -->
                 <div class="form-group">
@@ -135,7 +136,6 @@
                     </select>
                   </div>
                 </div>
-
 
                 <!-- 7 -->
                 <div class="form-group">
@@ -433,7 +433,7 @@
                     <div class="x_content">
             <div class="row tile_count">
 
-                        <div class="col-md-6 col-sm-8 col-xs-12 tile_stats_count">
+                        <div class="col-md-8 col-sm-8 col-xs-12 tile_stats_count">
                           <span class="count_top"><i class="fa fa-clock-o"></i> Total Price to client:</span>
                           <div class="count">$ <span class="count" id="low_cost"> 163,242 </span> - <span class="count" id="high_cost"> 222,342 </span></div>
                           <!-- <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>3% </i> From last Week</span> -->
@@ -800,6 +800,17 @@
         param['ju'] = $("#ju option:selected").val();
 
 
+        $("#company_name").change(function(){
+
+//            if ($("#company_name").val() == "Google"){
+
+                $("#size_comp").val(98770);
+                $("#industry").val(4);
+                $("#revenue").val(39122000000);
+//        }
+
+
+        })
 
       $.ajax({
         url : 'regr',
@@ -1022,7 +1033,7 @@
         },
         error : function(request,error)
         {
-            alert("Request: "+JSON.stringify(request));
+//            alert("Request: "+JSON.stringify(request));
         }
     });
 
