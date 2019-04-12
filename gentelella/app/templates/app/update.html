@@ -1,0 +1,1180 @@
+{% extends "app/base_site.html" %}
+
+{% block title %} Form Wizards {% endblock title %}
+
+{% block content %}
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="images/favicon.ico" type="image/ico" />
+
+    <title>Dentons </title>
+
+    <!-- Bootstrap -->
+    <link href="/static/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="/static/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="/static/vendors/nprogress/nprogress.css" rel="stylesheet">
+    <!-- iCheck -->
+    <link href="/static/vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+	
+    <!-- bootstrap-progressbar -->
+    <link href="/static/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+    <!-- JQVMap -->
+    <link href="/static/vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet"/>
+    <!-- bootstrap-daterangepicker -->
+    <link href="/static/vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+
+    <!-- Custom Theme Style -->
+    <link href="/static/build/css/custom.min.css" rel="stylesheet">
+  </head>
+
+  <body class="nav-md" style="height: 1500px">
+    <div class="container body" >
+      <div class="main_container" >
+
+
+        <!-- top navigation -->
+        <!-- /top navigation -->
+
+        <!-- page content -->
+        <div class="right_col" role="main">
+            <div class="col-md-4 col-sm-4 col-xs-12">
+
+              <div class="col-md-12 col-xs-12">
+          <div class="x_panel">
+            <div class="x_title">
+              <h2>Case Parameter <small></small></h2>
+              <ul class="nav navbar-right panel_toolbox">
+                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                </li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Settings 1</a>
+                    </li>
+                    <li><a href="#">Settings 2</a>
+                    </li>
+                  </ul>
+                </li>
+                <li><a class="close-link"><i class="fa fa-close"></i></a>
+                </li>
+              </ul>
+              <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+              <br />
+              <form class="form-horizontal form-label-left" id="case_param">
+
+                <div class="form-group">
+                  <label class="control-label col-md-3 col-sm-3 col-xs-12">Case Name</label>
+                  <div class="col-md-9 col-sm-9 col-xs-12">
+                    <input type="text" class="form-control" placeholder="Case Name" id="case_name" >
+                  </div>
+                </div>
+                
+
+                <div class="form-group">
+                  <label class="control-label col-md-3 col-sm-3 col-xs-12">Company</label>
+                  <div class="col-md-9 col-sm-9 col-xs-12">
+                    <input type="text" class="form-control" placeholder="Company Name" id="company_name" value="Google">
+                  </div>
+                </div>
+
+
+                <!-- 3 -->
+                <div class="form-group">
+                  <label class="control-label col-md-3 col-sm-3 col-xs-12">Company Size </label>
+                  <div class="col-md-9 col-sm-9 col-xs-12">
+                    <input type="number" class="form-control"  placeholder="" id="size_comp" value="98770">
+                  </div>
+                </div>
+
+                <!-- 4 -->
+                <div class="form-group">
+                  <label class="control-label col-md-3 col-sm-3 col-xs-12">Company Industry</label>
+                  <div class="col-md-9 col-sm-9 col-xs-12">
+                    <select class="form-control" id="industry">
+                      <option value="0">Banking</option>
+                      <option value="1">Communication</option>
+                      <option value="2">Health</option>
+                      <option value="3">Manufacturing</option>
+                      <option value="4">Tech</option>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- 5 -->
+                <div class="form-group">
+                  <label class="control-label col-md-3 col-sm-3 col-xs-12">Company Revenue </label>
+                  <div class="col-md-9 col-sm-9 col-xs-12">
+                    <input type="number" class="form-control"  placeholder="", id="revenue" value="39122">
+                  </div>
+                </div>
+
+                <!-- 1 -->
+                <div class="form-group">
+                  <label class="control-label col-md-3 col-sm-3 col-xs-12">Case Value </label>
+                  <div class="col-md-9 col-sm-9 col-xs-12">
+                    <input type="number" class="form-control"  placeholder="200" id="value" value="200">
+                  </div>
+                </div>
+
+                <!-- 2 -->
+
+
+
+                <!-- 6 -->
+                <div class="form-group">
+                  <label class="control-label col-md-3 col-sm-3 col-xs-12">Diligence Requirements</label>
+                  <div class="col-md-9 col-sm-9 col-xs-12">
+                    <select class="form-control" id="dr">
+                      <option value="0">Red Flag</option>
+                      <option value="1">Full DDR</option>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- 7 -->
+                <div class="form-group">
+                  <label class="control-label col-md-3 col-sm-3 col-xs-12">Transaction Structure</label>
+                  <div class="col-md-9 col-sm-9 col-xs-12">
+                    <select class="form-control" id="ts">
+                      <option value="0">Earnout</option>
+                      <option value="1">Escrow &nbsp</option>
+                      <option value="2">Gross-up </option>
+                      <option value="3">Not Sure </option>
+                      <option value="4">Options to Employees </option>
+                    </select>
+                  </div>
+                </div>
+
+
+
+                <!-- 8 -->
+                <div class="form-group">
+                  <label class="control-label col-md-3 col-sm-3 col-xs-12">Jurisdiction</label>
+                  <div class="col-md-9 col-sm-9 col-xs-12">
+                    <select class="form-control" id="ju">
+                      <option value="0">Multiple </option>
+                      <option value="1">US Only</option>
+
+                    </select>
+                  </div>
+                </div>
+
+                  <div class="form-group">
+                  <label class="control-label col-md-3 col-sm-3 col-xs-12"> Documents Number</label>
+                  <div class="col-md-9 col-sm-9 col-xs-12">
+                    <input type="number" class="form-control"  placeholder="500" id="num_docs" value="316">
+                  </div>
+                </div>
+
+
+                  <div>
+                <!--<div class="form-group">-->
+                  <!--<label class="control-label col-md-3 col-sm-3 col-xs-12">Disabled Input </label>-->
+                  <!--<div class="col-md-9 col-sm-9 col-xs-12">-->
+                    <!--<input type="text" class="form-control" disabled="disabled" placeholder="Disabled Input">-->
+                  <!--</div>-->
+                <!--</div>-->
+                <!--<div class="form-group">-->
+                  <!--<label class="control-label col-md-3 col-sm-3 col-xs-12">Read-Only Input</label>-->
+                  <!--<div class="col-md-9 col-sm-9 col-xs-12">-->
+                    <!--<input type="text" class="form-control" readonly="readonly" placeholder="Read-Only Input">-->
+                  <!--</div>-->
+                <!--</div>-->
+                <!--<div class="form-group">-->
+                  <!--<label class="control-label col-md-3 col-sm-3 col-xs-12">Date Of Birth <span class="required">*</span>-->
+                  <!--</label>-->
+                  <!--<div class="col-md-9 col-sm-9 col-xs-12">-->
+                    <!--<textarea class="form-control" rows="3" placeholder='rows="3"'></textarea>-->
+                  <!--</div>-->
+                <!--</div>-->
+                <!--<div class="form-group">-->
+                  <!--<label class="control-label col-md-3 col-sm-3 col-xs-12">Password</label>-->
+                  <!--<div class="col-md-9 col-sm-9 col-xs-12">-->
+                    <!--<input type="password" class="form-control" value="passwordonetwo">-->
+                  <!--</div>-->
+                <!--</div>-->
+                <!--<div class="form-group">-->
+                  <!--<label class="control-label col-md-3 col-sm-3 col-xs-12">AutoComplete</label>-->
+                  <!--<div class="col-md-9 col-sm-9 col-xs-12">-->
+                    <!--<input type="text" name="country" id="autocomplete-custom-append" class="form-control col-md-10"/>-->
+                  <!--</div>-->
+                <!--</div>-->
+                <!--<div class="form-group">-->
+                  <!--<label class="control-label col-md-3 col-sm-3 col-xs-12">Select</label>-->
+                  <!--<div class="col-md-9 col-sm-9 col-xs-12">-->
+                    <!--<select class="form-control">-->
+                      <!--<option>Choose option</option>-->
+                      <!--<option>Option one</option>-->
+                      <!--<option>Option two</option>-->
+                      <!--<option>Option three</option>-->
+                      <!--<option>Option four</option>-->
+                    <!--</select>-->
+                  <!--</div>-->
+                <!--</div>-->
+                <!--<div class="form-group">-->
+                  <!--<label class="control-label col-md-3 col-sm-3 col-xs-12">Select Custom</label>-->
+                  <!--<div class="col-md-9 col-sm-9 col-xs-12">-->
+                    <!--<select class="select2_single form-control" tabindex="-1">-->
+                      <!--<option></option>-->
+                      <!--<option value="AK">Alaska</option>-->
+                      <!--<option value="HI">Hawaii</option>-->
+                      <!--<option value="CA">California</option>-->
+                      <!--<option value="NV">Nevada</option>-->
+                      <!--<option value="OR">Oregon</option>-->
+                      <!--<option value="WA">Washington</option>-->
+                      <!--<option value="AZ">Arizona</option>-->
+                      <!--<option value="CO">Colorado</option>-->
+                      <!--<option value="ID">Idaho</option>-->
+                      <!--<option value="MT">Montana</option>-->
+                      <!--<option value="NE">Nebraska</option>-->
+                      <!--<option value="NM">New Mexico</option>-->
+                      <!--<option value="ND">North Dakota</option>-->
+                      <!--<option value="UT">Utah</option>-->
+                      <!--<option value="WY">Wyoming</option>-->
+                      <!--<option value="AR">Arkansas</option>-->
+                      <!--<option value="IL">Illinois</option>-->
+                      <!--<option value="IA">Iowa</option>-->
+                      <!--<option value="KS">Kansas</option>-->
+                      <!--<option value="KY">Kentucky</option>-->
+                      <!--<option value="LA">Louisiana</option>-->
+                      <!--<option value="MN">Minnesota</option>-->
+                      <!--<option value="MS">Mississippi</option>-->
+                      <!--<option value="MO">Missouri</option>-->
+                      <!--<option value="OK">Oklahoma</option>-->
+                      <!--<option value="SD">South Dakota</option>-->
+                      <!--<option value="TX">Texas</option>-->
+                    <!--</select>-->
+                  <!--</div>-->
+                <!--</div>-->
+                <!--<div class="form-group">-->
+                  <!--<label class="control-label col-md-3 col-sm-3 col-xs-12">Select Grouped</label>-->
+                  <!--<div class="col-md-9 col-sm-9 col-xs-12">-->
+                    <!--<select class="select2_group form-control">-->
+                      <!--<optgroup label="Alaskan/Hawaiian Time Zone">-->
+                        <!--<option value="AK">Alaska</option>-->
+                        <!--<option value="HI">Hawaii</option>-->
+                      <!--</optgroup>-->
+                      <!--<optgroup label="Pacific Time Zone">-->
+                        <!--<option value="CA">California</option>-->
+                        <!--<option value="NV">Nevada</option>-->
+                        <!--<option value="OR">Oregon</option>-->
+                        <!--<option value="WA">Washington</option>-->
+                      <!--</optgroup>-->
+                      <!--<optgroup label="Mountain Time Zone">-->
+                        <!--<option value="AZ">Arizona</option>-->
+                        <!--<option value="CO">Colorado</option>-->
+                        <!--<option value="ID">Idaho</option>-->
+                        <!--<option value="MT">Montana</option>-->
+                        <!--<option value="NE">Nebraska</option>-->
+                        <!--<option value="NM">New Mexico</option>-->
+                        <!--<option value="ND">North Dakota</option>-->
+                        <!--<option value="UT">Utah</option>-->
+                        <!--<option value="WY">Wyoming</option>-->
+                      <!--</optgroup>-->
+                      <!--<optgroup label="Central Time Zone">-->
+                        <!--<option value="AL">Alabama</option>-->
+                        <!--<option value="AR">Arkansas</option>-->
+                        <!--<option value="IL">Illinois</option>-->
+                        <!--<option value="IA">Iowa</option>-->
+                        <!--<option value="KS">Kansas</option>-->
+                        <!--<option value="KY">Kentucky</option>-->
+                        <!--<option value="LA">Louisiana</option>-->
+                        <!--<option value="MN">Minnesota</option>-->
+                        <!--<option value="MS">Mississippi</option>-->
+                        <!--<option value="MO">Missouri</option>-->
+                        <!--<option value="OK">Oklahoma</option>-->
+                        <!--<option value="SD">South Dakota</option>-->
+                        <!--<option value="TX">Texas</option>-->
+                        <!--<option value="TN">Tennessee</option>-->
+                        <!--<option value="WI">Wisconsin</option>-->
+                      <!--</optgroup>-->
+                      <!--<optgroup label="Eastern Time Zone">-->
+                        <!--<option value="CT">Connecticut</option>-->
+                        <!--<option value="DE">Delaware</option>-->
+                        <!--<option value="FL">Florida</option>-->
+                        <!--<option value="GA">Georgia</option>-->
+                        <!--<option value="IN">Indiana</option>-->
+                        <!--<option value="ME">Maine</option>-->
+                        <!--<option value="MD">Maryland</option>-->
+                        <!--<option value="MA">Massachusetts</option>-->
+                        <!--<option value="MI">Michigan</option>-->
+                        <!--<option value="NH">New Hampshire</option>-->
+                        <!--<option value="NJ">New Jersey</option>-->
+                        <!--<option value="NY">New York</option>-->
+                        <!--<option value="NC">North Carolina</option>-->
+                        <!--<option value="OH">Ohio</option>-->
+                        <!--<option value="PA">Pennsylvania</option>-->
+                        <!--<option value="RI">Rhode Island</option>-->
+                        <!--<option value="SC">South Carolina</option>-->
+                        <!--<option value="VT">Vermont</option>-->
+                        <!--<option value="VA">Virginia</option>-->
+                        <!--<option value="WV">West Virginia</option>-->
+                      <!--</optgroup>-->
+                    <!--</select>-->
+                  <!--</div>-->
+                <!--</div>-->
+                <!--<div class="form-group">-->
+                  <!--<label class="control-label col-md-3 col-sm-3 col-xs-12">Select Multiple</label>-->
+                  <!--<div class="col-md-9 col-sm-9 col-xs-12">-->
+                    <!--<select class="select2_multiple form-control" multiple="multiple">-->
+                      <!--<option>Choose option</option>-->
+                      <!--<option>Option one</option>-->
+                      <!--<option>Option two</option>-->
+                      <!--<option>Option three</option>-->
+                      <!--<option>Option four</option>-->
+                      <!--<option>Option five</option>-->
+                      <!--<option>Option six</option>-->
+                    <!--</select>-->
+                  <!--</div>-->
+                <!--</div>-->
+
+                <!--<div class="control-group">-->
+                  <!--<label class="control-label col-md-3 col-sm-3 col-xs-12">Input Tags</label>-->
+                  <!--<div class="col-md-9 col-sm-9 col-xs-12">-->
+                    <!--<input id="tags_1" type="text" class="tags form-control" value="social, adverts, sales" />-->
+                    <!--<div id="suggestions-container" style="position: relative; float: left; width: 250px; margin: 10px;"></div>-->
+                  <!--</div>-->
+                <!--</div>-->
+                <!--<div class="form-group">-->
+                  <!--<label class="col-md-3 col-sm-3 col-xs-12 control-label">Checkboxes and radios-->
+                    <!--<br>-->
+                    <!--<small class="text-navy">Normal Bootstrap elements</small>-->
+                  <!--</label>-->
+
+                  <!--<div class="col-md-9 col-sm-9 col-xs-12">-->
+                    <!--<div class="checkbox">-->
+                      <!--<label>-->
+                        <!--<input type="checkbox" value=""> Option one. select more than one options-->
+                      <!--</label>-->
+                    <!--</div>-->
+                    <!--<div class="checkbox">-->
+                      <!--<label>-->
+                        <!--<input type="checkbox" value=""> Option two. select more than one options-->
+                      <!--</label>-->
+                    <!--</div>-->
+                    <!--<div class="radio">-->
+                      <!--<label>-->
+                        <!--<input type="radio" checked="" value="option1" id="optionsRadios1" name="optionsRadios"> Option one. only select one option-->
+                      <!--</label>-->
+                    <!--</div>-->
+                    <!--<div class="radio">-->
+                      <!--<label>-->
+                        <!--<input type="radio" value="option2" id="optionsRadios2" name="optionsRadios"> Option two. only select one option-->
+                      <!--</label>-->
+                    <!--</div>-->
+                  <!--</div>-->
+                <!--</div>-->
+
+
+                <!--<div class="form-group">-->
+                  <!--<label class="control-label col-md-3 col-sm-3 col-xs-12">Switch</label>-->
+                  <!--<div class="col-md-9 col-sm-9 col-xs-12">-->
+                    <!--<div class="">-->
+                      <!--<label>-->
+                        <!--<input type="checkbox" class="js-switch" checked /> Checked-->
+                      <!--</label>-->
+                    <!--</div>-->
+                    <!--<div class="">-->
+                      <!--<label>-->
+                        <!--<input type="checkbox" class="js-switch" /> Unchecked-->
+                      <!--</label>-->
+                    <!--</div>-->
+                    <!--<div class="">-->
+                      <!--<label>-->
+                        <!--<input type="checkbox" class="js-switch" disabled="disabled" /> Disabled-->
+                      <!--</label>-->
+                    <!--</div>-->
+                    <!--<div class="">-->
+                      <!--<label>-->
+                        <!--<input type="checkbox" class="js-switch" disabled="disabled" checked="checked" /> Disabled Checked-->
+                      <!--</label>-->
+                    <!--</div>-->
+                  <!--</div>-->
+                <!--</div>-->
+
+                  </div>
+                <div class="ln_solid"></div>
+
+              </form>
+                <a href="mg_page1.html"> <button class="btn btn-success" >Submit</button></a>
+            </div>
+          </div>
+        </div>
+
+            </div>
+
+            <div class="col-md-8 col-sm-8 col-xs-12">
+          <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>Prediction</h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a href="#">Settings 1</a>
+                          </li>
+                          <li><a href="#">Settings 2</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><a class="close-link"><i class="fa fa-close"></i></a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+
+                    <div id="wait" class="x_content">
+                    <div id="graph_content" class="x_content">
+
+            <div class="row tile_count">
+
+                        <div class="col-md-8 col-sm-8 col-xs-12 tile_stats_count">
+                          <span class="count_top"><i class="fa fa-clock-o"></i> Total Price to client:</span>
+                          <div class="count">$ <span class="count" id="cost"> 1327638 </span> </span></div>
+                          <!-- <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>3% </i> From last Week</span> -->
+                        </div>
+                        <!-- <div class="col-md-4 col-sm-8 col-xs-12 tile_stats_count">
+                          <span class="count_top"><i class="fa fa-user"></i> Total Males</span>
+                          <div class="count green">2,500</div>
+                          <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
+                        </div> -->
+                        <!-- <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+                          <span class="count_top"><i class="fa fa-user"></i> Total Females</span>
+                          <div class="count">4,567</div>
+                          <span class="count_bottom"><i class="red"><i class="fa fa-sort-desc"></i>12% </i> From last Week</span>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+                          <span class="count_top"><i class="fa fa-user"></i> Total Collections</span>
+                          <div class="count">2,315</div>
+                          <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+                          <span class="count_top"><i class="fa fa-user"></i> Total Connections</span>
+                          <div class="count">7,325</div>
+                          <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
+                        </div> -->
+                      </div>
+
+
+          <div class="row tile_count">
+
+            <div class="col-md-12 col-sm-12 col-xs-12 tile_stats_count">
+              <span class="count_top"><i class="fa fa-user"></i> Total Price:</span>
+              <div class="count">$ <span class="count" id="company_cost">1986256</span></div>
+              <!-- <span class="count_bottom"><i class="green">4% </i> From last Week</span> -->
+            </div>
+
+            <!-- <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="tile-stats">
+                  <span class="count_top"><i class="fa fa-user"></i> Total Cost to the law firm:</span>
+                  <div class="icon"><i class="fa fa-comments-o"></i></div>
+                  <div class="count">$ 422,134</div>
+                  <h3>Cost</h3>
+                  <p>Total Cost to the law firms:</p>
+                </div>
+              </div> -->
+          </div>
+
+
+ <div class="col-md-6 col-sm-6 col-xs-12">
+            <div class="x_panel tile fixed_height_320">
+              <div class="x_title">
+                <h2>Hours Required</h2>
+                <ul class="nav navbar-right panel_toolbox">
+                  <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                  </li>
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                    <ul class="dropdown-menu" role="menu">
+                      <li><a href="#">Settings 1</a>
+                      </li>
+                      <li><a href="#">Settings 2</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><a class="close-link"><i class="fa fa-close"></i></a>
+                  </li>
+                </ul>
+                <div class="clearfix"></div>
+              </div>
+              <div class="x_content">
+                <h4></h4>
+                <div class="widget_summary">
+                  <div class="w_left w_25">
+                    <span>Partner</span>
+                  </div>
+                  <div class="w_center w_55">
+                    <div class="progress">
+                      <div class="progress-bar bg-green" id = "partner_pr" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 10%;">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="w_right w_20">
+                    <span id="partner">20</span>
+                  </div>
+                  <div class="clearfix"></div>
+                </div>
+
+                <div class="widget_summary">
+                  <div class="w_left w_25">
+                    <span>Principal Associate</span>
+                  </div>
+                  <div class="w_center w_55">
+                    <div class="progress">
+                      <div class="progress-bar bg-green"  id = "pa_pr" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 20%;">
+                        <span class="sr-only">40</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="w_right w_20">
+                    <span id="senior_partner">40</span>
+                  </div>
+                  <div class="clearfix"></div>
+                </div>
+                <div class="widget_summary">
+                  <div class="w_left w_25">
+                    <span>Senior Associate</span>
+                  </div>
+                  <div class="w_center w_55">
+                    <div class="progress">
+                      <div class="progress-bar bg-green" id = "sa_pr" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 30%;">
+                        <span class="sr-only">60</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="w_right w_20">
+                    <span id="assocaites">60</span>
+                  </div>
+                  <div class="clearfix"></div>
+                </div>
+                <div class="widget_summary">
+                  <div class="w_left w_25">
+                    <span>Junior Associate</span>
+                  </div>
+                  <div class="w_center w_55">
+                    <div class="progress">
+                      <div class="progress-bar bg-green" id = "ja_pr" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                        <span class="sr-only">60% Complete</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="w_right w_20">
+                    <span id="ja">120</span>
+                  </div>
+                  <div class="clearfix"></div>
+                </div>
+                <div class="widget_summary">
+                  <div class="w_left w_25">
+                    <span>Paralegal</span>
+                  </div>
+                  <div class="w_center w_55">
+                    <div class="progress">
+                      <div class="progress-bar bg-green" id = "pl_pr" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                        <span class="sr-only">60% Complete</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="w_right w_20">
+                    <span id="pl">120</span>
+                  </div>
+                  <div class="clearfix"></div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+         <div class="col-md-6 col-sm-6 col-xs-12">
+          <div class="x_panel">
+            <div class="x_title">
+              <h2>Recommended Staffing</h2>
+              <ul class="nav navbar-right panel_toolbox">
+                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                </li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Settings 1</a>
+                    </li>
+                    <li><a href="#">Settings 2</a>
+                    </li>
+                  </ul>
+                </li>
+                <li><a class="close-link"><i class="fa fa-close"></i></a>
+                </li>
+              </ul>
+              <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+
+              <div id="echart_donut" style="height:300px;"></div>
+
+            </div>
+          </div>
+        </div>
+
+
+
+                      <div class="col-md-12 col-sm-12 col-xs-12">
+          <div class="x_panel">
+            <div class="x_title">
+              <h2>Due Diligence</h2>
+              <ul class="nav navbar-right panel_toolbox">
+                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                </li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Settings 1</a>
+                    </li>
+                    <li><a href="#">Settings 2</a>
+                    </li>
+                  </ul>
+                </li>
+                <li><a class="close-link"><i class="fa fa-close"></i></a>
+                </li>
+              </ul>
+              <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+
+              <div id="echart_dd" style="height:300px;"></div>
+
+            </div>
+          </div>
+        </div>
+                      <div class="col-md-12 col-sm-12 col-xs-12">
+          <div class="x_panel">
+            <div class="x_title">
+              <h2>Transaction</h2>
+              <ul class="nav navbar-right panel_toolbox">
+                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                </li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Settings 1</a>
+                    </li>
+                    <li><a href="#">Settings 2</a>
+                    </li>
+                  </ul>
+                </li>
+                <li><a class="close-link"><i class="fa fa-close"></i></a>
+                </li>
+              </ul>
+              <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+
+              <div id="echart_tn" style="height:300px;"></div>
+
+            </div>
+          </div>
+                         <div class="col-md-6 col-sm-6 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>Similar Cases</h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a href="#">Settings 1</a>
+                          </li>
+                          <li><a href="#">Settings 2</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><a class="close-link"><i class="fa fa-close"></i></a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+
+                    <button class="btn btn-default"> <a href="track.html"> Case 2093812 Facebook</a></button>
+                    <br>
+                    <button class="btn btn-default"> <a> Case 2093823 GE</a></button>
+                    <br>
+                    <button class="btn btn-default"> <a> Case 2093634 Airbnb</a></button>
+                <div>
+                    <!--<div id="echart_loudou" style="height:300px;"></div>-->
+</div>
+                  </div>
+                </div>
+              </div>
+        </div>
+                    </div>
+                </div>
+              </div>
+                </div>
+            </div>
+          <br>
+          </div>
+
+
+
+        <!-- /page content -->
+
+        <!-- footer content -->
+        <footer>
+          <div class="pull-right">
+            DentonsBook - by <a>LegalBots Team</a>
+          </div>
+          <div class="clearfix"></div>
+        </footer>
+        <!-- /footer content -->
+      </div>
+    </div>
+
+
+
+
+    <!-- jQuery -->
+    <script src="/static/vendors/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="/static/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- FastClick -->
+    <script src="/static/vendors/fastclick/lib/fastclick.js"></script>
+    <!-- NProgress -->
+    <script src="/static/vendors/nprogress/nprogress.js"></script>
+    <!-- Chart.js -->
+    <script src="/static/vendors/Chart.js/dist/Chart.min.js"></script>
+    <!-- gauge.js -->
+    <script src="/static/vendors/gauge.js/dist/gauge.min.js"></script>
+    <!-- bootstrap-progressbar -->
+    <script src="/static/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+    <!-- iCheck -->
+    <script src="/static/vendors/iCheck/icheck.min.js"></script>
+    <!-- Skycons -->
+    <script src="/static/vendors/skycons/skycons.js"></script>
+    <!-- Flot -->
+    <script src="/static/vendors/Flot/jquery.flot.js"></script>
+    <script src="/static/vendors/Flot/jquery.flot.pie.js"></script>
+    <script src="/static/vendors/Flot/jquery.flot.time.js"></script>
+    <script src="/static/vendors/Flot/jquery.flot.stack.js"></script>
+    <script src="/static/vendors/Flot/jquery.flot.resize.js"></script>
+    <!-- Flot plugins -->
+    <script src="/static/vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
+    <script src="/static/vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
+    <script src="/static/vendors/flot.curvedlines/curvedLines.js"></script>
+    <!-- DateJS -->
+    <script src="/static/vendors/DateJS/build/date.js"></script>
+    <!-- JQVMap -->
+    <script src="/static/vendors/jqvmap/dist/jquery.vmap.js"></script>
+    <script src="/static/vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+    <script src="/static/vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
+    <!-- bootstrap-daterangepicker -->
+    <script src="/static/vendors/moment/min/moment.min.js"></script>
+    <script src="/static/vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+
+    <script src="/static/vendors/echarts/dist/echarts.min.js"></script>
+    <script src="/static/vendors/echarts/map/js/world.js"></script>
+
+    <!-- Custom Theme Scripts -->
+    <!-- <script src="/static/build/js/custom.min.js"></script> -->
+    <!--<script src="/static/build/js/custom2.js"></script>-->
+
+
+
+	
+  </body>
+  {% endblock content %}
+
+{% block javascripts %}
+  {{ block.super}}
+
+  <script>
+
+
+  $("#submit_form").click(function(){
+        var param = {};
+        param['company'] = $("#company_name").val();
+        param['value'] = $("#value").val();
+        param['num_docs'] = $("#num_docs").val();
+        param['size_comp'] = $("#size_comp").val();
+        param['industry'] = $("#industry option:selected").val();
+        param['revenue'] = $("#revenue").val();
+        param['dr'] = $("#dr option:selected").val();
+        param['ts'] = $("#ts option:selected").val();
+        param['ju'] = $("#ju option:selected").val();
+
+        $.ajax({
+        url : 'submit_case',
+        type : 'POST',
+        data : param,
+        dataType:'json',
+        success : function(data) {
+
+        },
+        error : function(request,error)
+        {
+//            alert("Request: "+JSON.stringify(request));
+        }
+    });
+
+
+
+
+  });
+
+
+
+    $("#case_param").change(function() {
+        var param = {};
+        param['company'] = $("#company_name").val();
+        param['value'] = $("#value").val();
+        param['num_docs'] = $("#num_docs").val();
+        param['size_comp'] = $("#size_comp").val();
+        param['industry'] = $("#industry option:selected").val();
+        param['revenue'] = $("#revenue").val();
+        param['dr'] = $("#dr option:selected").val();
+        param['ts'] = $("#ts option:selected").val();
+        param['ju'] = $("#ju option:selected").val();
+
+//        $("#graph_content").hide();
+
+        $("#company_name").change(function(){
+
+
+                $("#size_comp").val(98770);
+                $("#industry").val(4);
+                $("#revenue").val(39122);
+//        }
+
+
+        });
+
+      $.ajax({
+        url : 'regr',
+        type : 'POST',
+        data : param,
+        dataType:'json',
+        success : function(data) {
+//            $("#wait").hide();
+//            $("#graph_content").show();
+
+            response = data['raw'];
+            $("#company_cost").text(data['cost']) ;
+             $("#cost").text(Math.floor(data['cost'] - data['pl_sum']*100)) ;
+//            $("#high_cost").text(Math.floor(data['cost'] * 1.4));
+//            $("#low_cost").text(Math.floor(data['cost'] * 1.1)) ;
+//            $("#high_cost").text(Math.floor(data['cost'] * 1.4));
+
+            $("#ja").text(data['ja_sum']);
+            $("#pl").text(data['pl_sum']);
+            $("#assocaites").text(data['sa_sum'])
+            $("#senior_partner").text(data['pa_sum'])
+            $("#partner").text(data['partner_sum'])
+
+            var max_hour = Math.max(data['ja_sum'], data['pl_sum'], data['sa_sum'], data['pa_sum'], data['partner_sum']);
+
+
+            $("#ja_pr").attr("style", "width: " + (data['ja_sum']/max_hour)*100+"%");
+            $("#pl_pr").attr("style", "width: " + (data['pl_sum']/max_hour)*100+"%");
+            $("#sa_pr").attr("style", "width: " + (data['sa_sum']/max_hour)*100+"%");
+            $("#pa_pr").attr("style", "width: " + (data['pa_sum']/max_hour)*100+"%");
+            $("#partner_pr").attr("style", "width: " + (data['partner_sum']/max_hour)*100+"%");
+
+
+
+            var echartDD = echarts.init(document.getElementById('echart_dd'));
+			  echartDD.setOption({
+                  legend: {
+                  data: ['Partner','Pricipal Associate','Senior Associate', 'Junior Associate', 'Paralegal']
+                },
+                   xAxis:  {
+                      type: 'value'
+                  },
+                  yAxis: {
+                      type: 'category',
+                      data: ['review','report','research']
+                },
+					title: {
+							text: '',
+							subtext: '',
+							left: 'left',
+							top: 'bottom'
+					},
+                  tooltip : {
+                    trigger: 'axis',
+                    axisPointer : {
+                        type : 'shadow'
+                    }
+                     },
+
+					calculable: true,
+					series: [
+					    {
+                      name: 'Partner',
+                      type: 'bar',
+                      stack: '总量',
+                      label: {
+                          normal: {
+                              show: true,
+                              position: 'insideRight'
+                          }
+                      },
+                      data: [response[4], response[9], response[14]]
+                  },
+                    {
+                        name: 'Principal Associate',
+                        type: 'bar',
+                        stack: '总量',
+                        label: {
+                            normal: {
+                                show: true,
+                                position: 'insideRight'
+                            }
+                        },
+                        data: [response[3], response[8], response[13]]
+                    },
+                  {
+                      name: 'Senior Associate',
+                      type: 'bar',
+                      stack: '总量',
+                      label: {
+                          normal: {
+                              show: true,
+                              position: 'insideRight'
+                          }
+                      },
+                      data: [response[2], response[7], response[12]]
+                  },
+                {
+                    name: 'Junior Associate',
+                    type: 'bar',
+                    stack: '总量',
+                    label: {
+                        normal: {
+                            show: true,
+                            position: 'insideRight'
+                        }
+                    },
+                    data: [response[1], response[6], response[11]]
+                },
+
+              {
+                  name: 'Paralegal',
+                  type: 'bar',
+                  stack: '总量',
+                  label: {
+                      normal: {
+                          show: true,
+                          position: 'insideRight'
+                      }
+                  },
+                  data: [response[0], response[5], response[10]]
+              },
+
+					]
+			});
+
+
+            var echarttn = echarts.init(document.getElementById('echart_tn'));
+			  echarttn.setOption({
+                  legend: {
+                  data: ['Partner','Principal Associate','Senior Associate', 'Junior Associate', 'Paralegal']
+                },
+                   xAxis:  {
+                      type: 'value'
+                  },
+                  yAxis: {
+                      type: 'category',
+                      data: ['Drafting','Non-drafting']
+                },
+					title: {
+							text: '',
+							subtext: '',
+							left: 'left',
+							top: 'bottom'
+					},
+					tooltip: {
+							trigger: 'axis',
+                        axisPointer : {
+                        type : 'shadow'
+                    }
+					},
+
+					calculable: true,
+					series: [
+							     {
+            name: 'Partner',
+            type: 'bar',
+            stack: '总量',
+            label: {
+                normal: {
+                    show: true,
+                    position: 'insideRight'
+                }
+            },
+            data: [response[19], response[24]]
+        },
+        {
+            name: 'Principal Associate',
+            type: 'bar',
+            stack: '总量',
+            label: {
+                normal: {
+                    show: true,
+                    position: 'insideRight'
+                }
+            },
+            data: [response[18], response[23]]
+        },
+        {
+            name: 'Senior Associate',
+            type: 'bar',
+            stack: '总量',
+            label: {
+                normal: {
+                    show: true,
+                    position: 'insideRight'
+                }
+            },
+            data: [response[17], response[22]]
+        },
+        {
+            name: 'Junior Associate',
+            type: 'bar',
+            stack: '总量',
+            label: {
+                normal: {
+                    show: true,
+                    position: 'insideRight'
+                }
+            },
+            data: [response[16], response[21]]
+        },
+
+        {
+            name: 'Paralegal',
+            type: 'bar',
+            stack: '总量',
+            label: {
+                normal: {
+                    show: true,
+                    position: 'insideRight'
+                }
+            },
+            data: [response[15], response[20]]
+        },
+
+					]
+			});
+
+
+
+			  var echartDonut = echarts.init(document.getElementById('echart_donut'));
+
+			  echartDonut.setOption({
+				tooltip: {
+				  trigger: 'item',
+					// formatter: "{a} <br/>{b} : {c} ({d}%)"
+					formatter: "{b} : {c} "
+				},
+				calculable: true,
+				legend: {
+				  x: 'center',
+				  y: 'bottom',
+				  data: ['Partner', 'Principal Associate', 'Senior Associate', 'Junior Associate', 'Paralegals']
+				},
+				toolbox: {
+				  show: true,
+				  feature: {
+					magicType: {
+					  show: true,
+					  type: ['pie', 'funnel'],
+					  option: {
+						funnel: {
+						  x: '25%',
+						  width: '50%',
+						  funnelAlign: 'center',
+						  max: 1548
+						}
+					  }
+					},
+					restore: {
+					  show: true,
+					  title: "Restore"
+					},
+					saveAsImage: {
+					  show: true,
+					  title: "Save Image"
+					}
+				  }
+				},
+				series: [{
+				  name: 'Access to the resource',
+				  type: 'pie',
+				  radius: ['35%', '55%'],
+				  itemStyle: {
+					normal: {
+					  label: {
+						show: true
+					  },
+					  labelLine: {
+						show: true
+					  }
+					},
+					emphasis: {
+					  label: {
+						show: true,
+						position: 'center',
+						textStyle: {
+						  fontSize: '14',
+						  fontWeight: 'normal'
+						}
+					  }
+					}
+				  },
+				  data: [{
+					value: Math.ceil(data['partner_sum']/100),
+					name: 'Partner'
+				  }, {
+					value: Math.ceil(data['pa_sum']/100),
+					name: 'Principal Associate'
+				  }, {
+					value: Math.ceil(data['sa_sum']/100),
+					name: 'Senior Associate'
+				  }, {
+					value: Math.ceil(data['ja_sum']/100),
+					name: 'Junior Associate'
+				  }, {
+					value: Math.ceil(data['pl_sum']/100),
+					name: 'Paralegals'
+				  }]
+				}]
+			  });
+
+
+
+
+        },
+        error : function(request,error)
+        {
+//            alert("Request: "+JSON.stringify(request));
+        }
+    });
+
+
+    });
+
+  </script>
+  <!-- jQuery Smart Wizard -->
+  <!-- <script src="/static/vendors/jQuery-Smart-Wizard/js/jquery.smartWizard.js"></script> -->
+{% endblock javascripts %}
+</html>
+
