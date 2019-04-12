@@ -16,5 +16,6 @@ urlpatterns = [
     url(r'^submit_case$', views.submit_case, name = 'submit_case'),
 
     # The home page
-    url(r'^$', views.index, name='index'),
+    #url(r'^$', views.index, name='index'),
+    url(r'^$', views.home, name='index'),
 ]
