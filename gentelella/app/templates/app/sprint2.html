@@ -397,7 +397,7 @@
                   <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
                     <!--<button type="button" class="btn btn-primary">Cancel</button>-->
                     <!--<button type="reset" class="btn btn-primary">Reset</button>-->
-                    <button type="submit" class="btn btn-success"><a href="track.html">Submit</a></button>
+                    <button type="submit" class="btn btn-success" id="submit_form"><a href="track.html">Submit</a></button>
                   </div>
                 </div>
 
@@ -794,6 +794,37 @@
 
   <script>
 
+
+  $("#submit_form").click(function(){
+        var param = {};
+        param['company'] = $("#company_name").val();
+        param['value'] = $("#value").val();
+        param['num_docs'] = $("#num_docs").val();
+        param['size_comp'] = $("#size_comp").val();
+        param['industry'] = $("#industry option:selected").val();
+        param['revenue'] = $("#revenue").val();
+        param['dr'] = $("#dr option:selected").val();
+        param['ts'] = $("#ts option:selected").val();
+        param['ju'] = $("#ju option:selected").val();
+
+        $.ajax({
+        url : 'submit_case',
+        type : 'POST',
+        data : param,
+        dataType:'json',
+        success : function(data) {
+
+        },
+        error : function(request,error)
+        {
+//            alert("Request: "+JSON.stringify(request));
+        }
+    });
+
+
+
+
+  });
 
 
 
