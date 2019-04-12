@@ -1,0 +1,425 @@
+{% extends "app/base_site.html" %}
+
+{% block title %} Form Wizards {% endblock title %}
+
+{% block content %}
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="images/favicon.ico" type="image/ico" />
+
+    <title>Dentons </title>
+
+    <!-- Bootstrap -->
+    <link href="/static/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="/static/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="/static/vendors/nprogress/nprogress.css" rel="stylesheet">
+    <!-- iCheck -->
+    <link href="/static/vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+
+    <!-- bootstrap-progressbar -->
+    <link href="/static/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+    <!-- JQVMap -->
+    <link href="/static/vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet" />
+    <!-- bootstrap-daterangepicker -->
+    <link href="/static/vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+
+    <!-- Custom Theme Style -->
+    <link href="/static/build/css/custom.min.css" rel="stylesheet">
+</head>
+
+<body class="nav-md" style="height: 1500px">
+    <div class="container body">
+        <div class="main_container">
+
+
+            <!-- top navigation -->
+            <!-- /top navigation -->
+
+            <!-- page content -->
+            <div class="right_col" role="main">
+                <div class="col-md col-sm col-xs-12">
+
+
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="x_panel">
+                            <div class="x_title">
+                                <h2>Prediction</h2>
+                                <ul class="nav navbar-right panel_toolbox">
+                                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                            aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a href="#">Settings 1</a>
+                                            </li>
+                                            <li><a href="#">Settings 2</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="close-link"><i class="fa fa-close"></i></a>
+                                    </li>
+                                </ul>
+                                <div class="clearfix"></div>
+                            </div>
+
+                            <div id="wait" class="x_content">
+                                <div id="graph_content" class="x_content">
+
+                                    <div class="row tile_count">
+
+                                        <div class="col-md-8 col-sm-8 col-xs-12 tile_stats_count">
+                                            <span class="count_top"><i class="fa fa-clock-o"></i> Estimate Number of Documents:</span>
+                                            <div class="count">$ <span class="count" id="num_docs"> 500 </span> </span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="row tile_count">
+
+                                        <div class="col-md-12 col-sm-12 col-xs-12 tile_stats_count">
+                                            <span class="count_top"><i class="fa fa-user"></i> Estimate of Total Price:</span>
+                                            <div class="count">$ <span class="count" id="total_price">2000000</span>
+                                            </div>
+                                        </div>
+                                    </div>                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+                    <div class="col-md-12 col-xs-12">
+                        <div class="x_panel">
+                            <div class="x_title">
+                                <h2>Case Parameter <small></small></h2>
+                                <ul class="nav navbar-right panel_toolbox">
+                                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                            aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a href="#">Settings 1</a>
+                                            </li>
+                                            <li><a href="#">Settings 2</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="close-link"><i class="fa fa-close"></i></a>
+                                    </li>
+                                </ul>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="x_content">
+                                <br />
+                                <form class="form-horizontal form-label-left" id="case_param">
+
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Company</label>
+                                        <div class="col-md-9 col-sm-9 col-xs-12">
+                                            <input type="text" class="form-control" placeholder="Company Name"
+                                                id="company_name">
+                                        </div>
+                                    </div>
+
+
+                                    <!-- 3 -->
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Company Size </label>
+                                        <div class="col-md-9 col-sm-9 col-xs-12">
+                                            <input type="number" class="form-control" placeholder="" id="size_comp"
+                                                value="">
+                                        </div>
+                                    </div>
+
+                                    <!-- 4 -->
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Company
+                                            Industry</label>
+                                        <div class="col-md-9 col-sm-9 col-xs-12">
+                                            <select class="form-control" id="industry">
+                                                <option value="0">Banking</option>
+                                                <option value="1">Communication</option>
+                                                <option value="2">Health</option>
+                                                <option value="3">Manufacturing</option>
+                                                <option value="4">Tech</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <!-- 5 -->
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Company Revenue
+                                        </label>
+                                        <div class="col-md-9 col-sm-9 col-xs-12">
+                                            <input type="number" class="form-control" placeholder="" , id="revenue"
+                                                value="">
+                                        </div>
+                                    </div>
+
+                                    <!-- 1 -->
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Transaction Value </label>
+                                        <div class="col-md-9 col-sm-9 col-xs-12">
+                                            <input type="number" class="form-control" placeholder="200" id="value"
+                                                value="">
+                                        </div>
+                                    </div>
+
+                                    <!-- 2
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12"> Documents
+                                            Number</label>
+                                        <div class="col-md-9 col-sm-9 col-xs-12">
+                                            <input type="number" class="form-control" placeholder="500" id="num_docs"
+                                                value="">
+                                        </div>
+                                    </div> -->
+
+
+                                    <!-- 6 -->
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Diligence
+                                            Requirements</label>
+                                        <div class="col-md-9 col-sm-9 col-xs-12">
+                                            <select class="form-control" id="dr">
+                                                <option value="0">Red Flag</option>
+                                                <option value="1">Full DDR</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <!-- 7 -->
+                                    <!-- <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Transaction
+                                            Structure</label>
+                                        <div class="col-md-9 col-sm-9 col-xs-12">
+                                            <select class="form-control" id="ts">
+                                                <option value="0">Earnout</option>
+                                                <option value="1">Escrow &nbsp</option>
+                                                <option value="2">Gross-up </option>
+                                                <option value="3">Not Sure </option>
+                                                <option value="4">Options to Employees </option>
+                                            </select>
+                                        </div>
+                                    </div> -->
+
+
+
+                                    <!-- 8 -->
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Jurisdiction</label>
+                                        <div class="col-md-9 col-sm-9 col-xs-12">
+                                            <select class="form-control" id="ju">
+                                                <option value="0">Multiple </option>
+                                                <option value="1">US Only</option>
+
+                                            </select>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Timeline </label>
+                                        <div class="col-md-9 col-sm-9 col-xs-12">
+                                            <input type="text" class="form-control" placeholder="Write your timeline here" id="timeline">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Other </label>
+                                        <div class="col-md-9 col-sm-9 col-xs-12">
+                                            <input type="text" class="form-control" placeholder="Write your status of Communication and docs here" id="other">
+                                        </div>
+                                    </div>
+
+
+                                    <div class="ln_solid"></div>
+                                    <div class="form-group">
+                                        <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
+                                            <!--<button type="button" class="btn btn-primary">Cancel</button>-->
+                                            <!--<button type="reset" class="btn btn-primary">Reset</button>-->
+                                            <button type="submit" class="btn btn-success"><a
+                                                    href="track.html">Submit</a></button>
+                                        </div>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+
+                </div>
+                <br>
+            </div>
+
+
+
+            <!-- /page content -->
+
+            <!-- footer content -->
+            <footer>
+                <div class="pull-right">
+                    DentonsBook - by <a>LegalBots Team</a>
+                </div>
+                <div class="clearfix"></div>
+            </footer>
+            <!-- /footer content -->
+        </div>
+    </div>
+
+
+
+
+    <!-- jQuery -->
+    <script src="/static/vendors/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="/static/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- FastClick -->
+    <script src="/static/vendors/fastclick/lib/fastclick.js"></script>
+    <!-- NProgress -->
+    <script src="/static/vendors/nprogress/nprogress.js"></script>
+    <!-- Chart.js -->
+    <script src="/static/vendors/Chart.js/dist/Chart.min.js"></script>
+    <!-- gauge.js -->
+    <script src="/static/vendors/gauge.js/dist/gauge.min.js"></script>
+    <!-- bootstrap-progressbar -->
+    <script src="/static/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+    <!-- iCheck -->
+    <script src="/static/vendors/iCheck/icheck.min.js"></script>
+    <!-- Skycons -->
+    <script src="/static/vendors/skycons/skycons.js"></script>
+    <!-- Flot -->
+    <script src="/static/vendors/Flot/jquery.flot.js"></script>
+    <script src="/static/vendors/Flot/jquery.flot.pie.js"></script>
+    <script src="/static/vendors/Flot/jquery.flot.time.js"></script>
+    <script src="/static/vendors/Flot/jquery.flot.stack.js"></script>
+    <script src="/static/vendors/Flot/jquery.flot.resize.js"></script>
+    <!-- Flot plugins -->
+    <script src="/static/vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
+    <script src="/static/vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
+    <script src="/static/vendors/flot.curvedlines/curvedLines.js"></script>
+    <!-- DateJS -->
+    <script src="/static/vendors/DateJS/build/date.js"></script>
+    <!-- JQVMap -->
+    <script src="/static/vendors/jqvmap/dist/jquery.vmap.js"></script>
+    <script src="/static/vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+    <script src="/static/vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
+    <!-- bootstrap-daterangepicker -->
+    <script src="/static/vendors/moment/min/moment.min.js"></script>
+    <script src="/static/vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+
+    <script src="/static/vendors/echarts/dist/echarts.min.js"></script>
+    <script src="/static/vendors/echarts/map/js/world.js"></script>
+
+    <!-- Custom Theme Scripts -->
+    <!-- <script src="/static/build/js/custom.min.js"></script> -->
+    <!--<script src="/static/build/js/custom2.js"></script>-->
+
+
+
+
+</body>
+{% endblock content %}
+
+{% block javascripts %}
+{{ block.super}}
+
+<script>
+
+
+
+
+    $("#case_param").change(function () {
+        var param = {};
+        param['company'] = $("#company_name").val();
+        param['value'] = $("#value").val();
+        //param['num_docs'] = $("#num_docs").val();
+        param['size_comp'] = $("#size_comp").val();
+        param['industry'] = $("#industry option:selected").val();
+        param['revenue'] = $("#revenue").val();
+        param['dr'] = $("#dr option:selected").val();
+        // param['ts'] = $("#ts option:selected").val();
+        param['ju'] = $("#ju option:selected").val();
+
+        //        $("#graph_content").hide();
+
+        $("#company_name").change(function () {
+
+
+            $("#size_comp").val(98770);
+            $("#industry").val(4);
+            $("#revenue").val(39122);
+            //        }
+            
+
+        });
+        $("#total_price").text((param['size_comp']*param['industry'])*(param['value']/100+1))
+        $("#num_docs").text((param['industry']*79))
+
+
+        
+
+        // $.ajax({
+        //     url: 'regr',
+        //     type: 'POST',
+        //     data: param,
+        //     dataType: 'json',
+        //     success: function (data) {
+        //         //            $("#wait").hide();
+        //         //            $("#graph_content").show();
+
+        //         response = data['raw'];
+        //         $("#company_cost").text(data['cost']);
+        //         $("#cost").text(Math.floor(data['cost'] - data['pl_sum'] * 100));
+        //         //            $("#high_cost").text(Math.floor(data['cost'] * 1.4));
+        //         //            $("#low_cost").text(Math.floor(data['cost'] * 1.1)) ;
+        //         //            $("#high_cost").text(Math.floor(data['cost'] * 1.4));
+
+        //         // $("#ja").text(data['ja_sum']);
+        //         // $("#pl").text(data['pl_sum']);
+        //         // $("#assocaites").text(data['sa_sum'])
+        //         // $("#senior_partner").text(data['pa_sum'])
+        //         // $("#partner").text(data['partner_sum'])
+
+        //         // var max_hour = Math.max(data['ja_sum'], data['pl_sum'], data['sa_sum'], data['pa_sum'], data['partner_sum']);
+
+
+        //         // $("#ja_pr").attr("style", "width: " + (data['ja_sum'] / max_hour) * 100 + "%");
+        //         // $("#pl_pr").attr("style", "width: " + (data['pl_sum'] / max_hour) * 100 + "%");
+        //         // $("#sa_pr").attr("style", "width: " + (data['sa_sum'] / max_hour) * 100 + "%");
+        //         // $("#pa_pr").attr("style", "width: " + (data['pa_sum'] / max_hour) * 100 + "%");
+        //         // $("#partner_pr").attr("style", "width: " + (data['partner_sum'] / max_hour) * 100 + "%");
+
+
+                
+        //     },
+        //     error: function (request, error) {
+        //                     alert("Request: "+JSON.stringify(request));
+        //     }
+        // });
+
+
+    });
+
+</script>
+<!-- jQuery Smart Wizard -->
+<!-- <script src="/static/vendors/jQuery-Smart-Wizard/js/jquery.smartWizard.js"></script> -->
+{% endblock javascripts %}
+
+</html>
