@@ -48,60 +48,6 @@
                 <div class="col-md col-sm col-xs-12">
 
 
-                    <div class="col-md-12 col-sm-12 col-xs-12">
-                        <div class="x_panel">
-                            <div class="x_title">
-                                <h2>Prediction</h2>
-                                <ul class="nav navbar-right panel_toolbox">
-                                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                                    </li>
-                                    <li class="dropdown">
-                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                                            aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                                        <ul class="dropdown-menu" role="menu">
-                                            <li><a href="#">Settings 1</a>
-                                            </li>
-                                            <li><a href="#">Settings 2</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li><a class="close-link"><i class="fa fa-close"></i></a>
-                                    </li>
-                                </ul>
-                                <div class="clearfix"></div>
-                            </div>
-
-                            <div id="wait" class="x_content">
-                                <div id="graph_content" class="x_content">
-
-                                    <div class="row tile_count">
-
-                                        <div class="col-md-8 col-sm-8 col-xs-12 tile_stats_count">
-                                            <span class="count_top"><i class="fa fa-clock-o"></i> Estimate Number of Documents:</span>
-                                            <div class="count">$ <span class="count" id="num_docs"> 500 </span> </span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-                                    <div class="row tile_count">
-
-                                        <div class="col-md-12 col-sm-12 col-xs-12 tile_stats_count">
-                                            <span class="count_top"><i class="fa fa-user"></i> Estimate of Total Price:</span>
-                                            <div class="count">$ <span class="count" id="total_price">2000000</span>
-                                            </div>
-                                        </div>
-                                    </div>                                    
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-
-
-
                     <div class="col-md-12 col-xs-12">
                         <div class="x_panel">
                             <div class="x_title">
@@ -262,6 +208,56 @@
                         </div>
                     </div>
 
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="x_panel">
+                            <div class="x_title">
+                                <h2>Prediction</h2>
+                                <ul class="nav navbar-right panel_toolbox">
+                                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                            aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a href="#">Settings 1</a>
+                                            </li>
+                                            <li><a href="#">Settings 2</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="close-link"><i class="fa fa-close"></i></a>
+                                    </li>
+                                </ul>
+                                <div class="clearfix"></div>
+                            </div>
+
+                            <div id="wait" class="x_content">
+                                <div id="graph_content" class="x_content">
+
+                                    <div class="row tile_count">
+
+                                        <div class="col-md-8 col-sm-8 col-xs-12 tile_stats_count">
+                                            <span class="count_top"><i class="fa fa-clock-o"></i> Estimate Number of Documents:</span>
+                                            <div class="count">$ <span class="count" id="num_docs"> 500 </span> </span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="row tile_count">
+
+                                        <div class="col-md-12 col-sm-12 col-xs-12 tile_stats_count">
+                                            <span class="count_top"><i class="fa fa-user"></i> Estimate of Total Price:</span>
+                                            <div class="count">$ <span class="count" id="total_price">2000000</span>
+                                            </div>
+                                        </div>
+                                    </div>                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
                     
 
                 </div>
@@ -372,47 +368,6 @@
         $("#total_price").text((param['size_comp']*param['industry'])*(param['value']/100+1))
         $("#num_docs").text((param['industry']*79))
 
-
-        
-
-        // $.ajax({
-        //     url: 'regr',
-        //     type: 'POST',
-        //     data: param,
-        //     dataType: 'json',
-        //     success: function (data) {
-        //         //            $("#wait").hide();
-        //         //            $("#graph_content").show();
-
-        //         response = data['raw'];
-        //         $("#company_cost").text(data['cost']);
-        //         $("#cost").text(Math.floor(data['cost'] - data['pl_sum'] * 100));
-        //         //            $("#high_cost").text(Math.floor(data['cost'] * 1.4));
-        //         //            $("#low_cost").text(Math.floor(data['cost'] * 1.1)) ;
-        //         //            $("#high_cost").text(Math.floor(data['cost'] * 1.4));
-
-        //         // $("#ja").text(data['ja_sum']);
-        //         // $("#pl").text(data['pl_sum']);
-        //         // $("#assocaites").text(data['sa_sum'])
-        //         // $("#senior_partner").text(data['pa_sum'])
-        //         // $("#partner").text(data['partner_sum'])
-
-        //         // var max_hour = Math.max(data['ja_sum'], data['pl_sum'], data['sa_sum'], data['pa_sum'], data['partner_sum']);
-
-
-        //         // $("#ja_pr").attr("style", "width: " + (data['ja_sum'] / max_hour) * 100 + "%");
-        //         // $("#pl_pr").attr("style", "width: " + (data['pl_sum'] / max_hour) * 100 + "%");
-        //         // $("#sa_pr").attr("style", "width: " + (data['sa_sum'] / max_hour) * 100 + "%");
-        //         // $("#pa_pr").attr("style", "width: " + (data['pa_sum'] / max_hour) * 100 + "%");
-        //         // $("#partner_pr").attr("style", "width: " + (data['partner_sum'] / max_hour) * 100 + "%");
-
-
-                
-        //     },
-        //     error: function (request, error) {
-        //                     alert("Request: "+JSON.stringify(request));
-        //     }
-        // });
 
 
     });
