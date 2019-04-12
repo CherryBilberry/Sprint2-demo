@@ -252,7 +252,7 @@
   <script>
 
     var lang = "en-US";
-    var year = 2018;
+    var year = 2019;
     
     function dateToTS (date) {
         return date.valueOf();
@@ -286,9 +286,9 @@
 
 
     $("#time_line").ionRangeSlider({
-        min: dateToTS(new Date(year, 10, 1)),
+        min: dateToTS(new Date(year, 1, 1)),
         max: dateToTS(new Date(year, 11, 1)),
-        from: dateToTS(new Date(year, 10, 16)),
+        from: dateToTS(new Date(year, 3, 12)),
         to: dateToTS(new Date(year, 10, 23)),
         prettify: tsToDate,
         step: 1,            // default 1 (set step)
