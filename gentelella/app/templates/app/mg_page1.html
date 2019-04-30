@@ -27,6 +27,13 @@
     <!-- bootstrap-daterangepicker -->
     <link href="/static/vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
 
+
+    <link href="/static/vendors/pnotify/dist/pnotify.css" rel="stylesheet">
+
+    <link href="/static/vendors/pnotify/dist/pnotify.buttons.css" rel="stylesheet">
+
+    <link href="/static/vendors/pnotify/dist/pnotify.nonblock.css" rel="stylesheet">
+
     <!-- Custom Theme Style -->
     <link href="/static/build/css/custom.min.css" rel="stylesheet">
 {% endblock stylesheets %}
@@ -243,7 +250,32 @@
   <!-- Cropper -->
   <script src="/static/vendors/cropper/dist/cropper.min.js"></script>
 
+  <script src="/static/vendors/pnotify/dist/pnotify.js"></script>
+  <script src="/static/vendors/pnotify/dist/pnotify.buttons.js"></script>
+  <script src="/static/vendors/pnotify/dist/pnotify.nonblock.js"></script>
+
+
   <script>
+
+
+    $(document).ready(function()
+    {
+            new PNotify({
+                            title: 'Hours Exceeded',
+                            text: 'Case <a href="mg_hulk.html"> <button class="badge">Hulk</button></a>has used more hours than estimated',
+                            type: 'error',
+                            hide: false,
+                            styling: 'bootstrap3'
+                        });
+
+            new PNotify({
+                            title: 'Hours close to limit',
+                            text: 'Case <a href="mg_unicorn.html"> <button class="badge">Unicorn</button></a>has almost used all hours',
+                            hide: false,
+                            styling: 'bootstrap3'
+                        });
+
+    });
 
     var lang = "en-US";
     var year = 2019;
