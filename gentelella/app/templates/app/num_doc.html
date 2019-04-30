@@ -365,7 +365,7 @@
 
         });
         $("#total_price").text((param['size_comp']*param['industry'])*(param['value']/100+1))
-        $("#num_docs").text((param['industry']*79) + (param['value']/10+1))
+        $("#num_docs").text(Math.round((param['industry']*79) + (param['value']/10+1)))
 
 
 
