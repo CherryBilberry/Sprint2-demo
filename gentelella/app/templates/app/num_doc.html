@@ -350,10 +350,11 @@
 
 <script>
 
+setTimeout(
+    function()
+    {
 
-$(document).ready(function()
-{
-            new PNotify({
+        new PNotify({
                             title: 'Hours Exceeded',
                             text: 'Case <a href="mg_hulk.html"> <button class="badge">Hulk</button></a>has used more hours than estimated',
                             type: 'error',
@@ -361,15 +362,14 @@ $(document).ready(function()
                             styling: 'bootstrap3'
                         });
 
-            new PNotify({
-                            title: 'Hours close to limit',
-                            text: 'Case <a href="mg_unicorn.html"> <button class="badge">Unicorn</button></a>has almost used all hours',
-                            hide: false,
-                            styling: 'bootstrap3'
-                        });
+        new PNotify({
+                        title: 'Hours close to limit',
+                        text: 'Case <a href="mg_unicorn.html"> <button class="badge">Unicorn</button></a>has almost used all hours',
+                        hide: false,
+                        styling: 'bootstrap3'
+                    });
 
-});
-
+        }, 3000);
 
 
 
